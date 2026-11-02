@@ -15,11 +15,11 @@ Statik ma’lumot kartasi: sarlavha, bir-ikki jumlali tavsif va pastda bitta kic
 ```
 
 ## Qoidalar
-- To‘r: 2 ustun, oraliq 20px, eni `max-narrow` (980px); ≤734px da 1 ustun, oraliq 12px.
-- Yuza `card` (yorug‘da `bg-alt`, qorong‘uda `bg-elev`), `r-md`, chegarasiz va soyasiz — butun karta bosilmaydi, faqat tugma.
+- To‘r: 2 ustun, oraliq 20px, eni `max-narrow` (980px); ≤734px da 1 ustun, oraliq 12px. Uch ustun — `info-grid is-3` (833px dan 2, 734px dan 1). To‘rni sarlavhasi bilan birga `.narrow` ichiga qo‘ying — bir chiziqda turadi.
+- Yuza `card` (yorug‘da `bg-alt`, qorong‘uda `bg-elev`; kulrang `band-alt` ichida avtomatik oq), `r-md`, chegarasiz va soyasiz — butun karta bosilmaydi, faqat tugma.
 - Ichki chegara 21 / 28 / 28px. Sarlavha 24px/600 (`text-group`, `track-title`), tavsif 14px (`text-sm`) `fg`, 4 qatorgacha.
-- Amal pastga tekislanadi (`margin-top: auto`), shuning uchun qatordagi tugmalar bir chiziqda turadi: `btn btn-primary btn-xs` yoki `link-more`.
+- Amal ixtiyoriy va pastga tekislanadi (`margin-top: auto`), shuning uchun qatordagi tugmalar bir chiziqda turadi: `btn btn-primary btn-xs` yoki `link-more`. Afzallik yoki xususiyat kartasi tugmasiz bo‘ladi.
 - Bosiladigan, hoverda ko‘tariladigan karta kerak bo‘lsa — `Card`.
 
 ## Iste’molchi beradi
-Sarlavha, qisqa tavsif va bitta amal (havola yoki yuklab olish manzili).
+Sarlavha, qisqa tavsif va ixtiyoriy bitta amal (havola yoki yuklab olish manzili).

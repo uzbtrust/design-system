@@ -24,7 +24,7 @@ Saytning eng yuqori navigatsiyasi: chapda uzbtrust yulduzi, o‘rtada bo‘limla
 
 ## Qoidalar
 - Balandlik `globalnav-h` (44px), telefonda 48px. Fon `glass-nav` + `saturate(180%) blur(20px)`, pastki chiziqsiz. Ichki eni `max-narrow` (980px) + 22px chetlar.
-- Havolalar 12px (`text-footnote`), `fg-2`; hoverda va joriy sahifada (`aria-current="page"`) — `fg`. 5–8 bo‘lim, har biri bir-ikki so‘z.
+- Havolalar 12px (`text-footnote`), `fg-2`; hoverda va joriy sahifada (`aria-current="page"`) — `fg`. 5–8 bo‘lim, har biri bir-ikki so‘z; 2–4 bo‘lim bo‘lsa `globalnav-list is-few` — havolalar o‘ngga yig‘iladi.
 - Yulduz 18px — `assets/Logos/uzbtrust-star.svg`, rangi o‘zgarmaydi, hoverda opacity 0.72. Mahsulot saytida yulduz o‘rniga mahsulot belgisi (`assets/Marks` qolipi).
 - Yopishqoq emas — sahifa bilan birga ketadi. Yopishqoq ikkinchi qator — `LocalNav`.
 - ≤833px: ro‘yxat yashirinadi, ikki chiziqli menyu tugmasi chiqadi. Bosilganda `.globalnav` ga `is-open` va `aria-expanded="true"`: chiziqlar «×» ga aylanadi, ro‘yxat ekranni egallaydi, havolalar 28px/600 (`track-eyebrow`). Escape yopadi va fokusni tugmaga qaytaradi.

@@ -8,7 +8,7 @@ uzbtrust sayt sahifasi: oq va kulrang bandlar, katta sarlavhalar, shisha navigat
 2. `GlobalNav` — 44px, sahifa bilan birga ketadi.
 3. `LocalNav` — 52px, yopishqoq: sahifa nomi, bo‘limlar, bitta `btn-xs` amal. Bo‘lim yoki mahsulotlar oilasi boshida ostidan `ChapterNav` — ikonli bo‘limlar qatori.
 4. Birinchi ekran: bosh sahifada `Tile` to‘ri (bitta `tile-hero` + ikki ustunli tile'lar), ichki sahifada `Hero`, video bo‘lsa `VideoHero`, yoki `band` + `band-head`.
-5. Bandlar: `bg` va `bg-alt` navbat bilan, har biri `band-y` ichki chegara bilan. Ichida — `band-head` (chapda `band-title`, o‘ngda `link-more`), `copy-highlight` paragraf, `InfoCard` to‘ri, `Gallery`, `Specs` (texnik xususiyatlar va solishtirish), `StatsTable`, `Accordion`. Uzun tushuntirish «Batafsil» tugmasidan `Modal` da ochiladi.
+5. Bandlar: `bg` va `bg-alt` navbat bilan, har biri `band-y` ichki chegara bilan. Ichida — `band-head` (chapda `band-title`, o‘ngda `link-more`), `copy-highlight` paragraf, `InfoCard` to‘ri, `Gallery`, `Specs` (texnik xususiyatlar va solishtirish), `StatsTable`, `Accordion`. Uzun tushuntirish «Batafsil» tugmasidan `Modal` da ochiladi. Band ichidagi kontent `.narrow` (980px) ga o‘raladi; kulrang band ichida kartalar oq.
 6. `Footer` — izohlar, xarita, huquqiy qator.
 
 ## O‘lchamlar

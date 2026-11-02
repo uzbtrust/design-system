@@ -20,7 +20,7 @@
   .demo-bar { height: 12px; border-radius: var(--r-pill); background: var(--fill); overflow: hidden; }
   .demo-bar span { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
   .demo-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .intro { max-width: var(--max-narrow); margin: 0 auto var(--s-7); padding-inline: 22px; }
+  .intro { margin-bottom: var(--s-7); }
 </style>
 </head>
 <body>
@@ -103,7 +103,7 @@
   </section>
 
   <section class="band" id="tamoyillar" aria-label="Tamoyillar">
-    <div class="intro">
+    <div class="narrow intro">
       <p class="copy-highlight"><strong>Bo‘sh joy — dizayn.</strong> Katta sarlavha, kulrang davomi va bitta urg‘u rangi. Shubha bo‘lsa, chiziq, quti yoki yorliqni olib tashlang. <strong>Tipografiya ishni bajaradi.</strong></p>
     </div>
     <div id="komponentlar">
@@ -112,7 +112,7 @@
         <ul class="gallery-track">
           <li class="gallery-item"><figure class="gallery-card">
             <figcaption class="gallery-caption copy-highlight is-sm"><strong>Raqam so‘zdan kuchli.</strong> Har bo‘limda bitta asosiy ko‘rsatkich va uning qisqa izohi.</figcaption>
-            <p class="demo-big">38<small>komponent</small></p>
+            <p class="demo-big">42<small>komponent</small></p>
           </figure></li>
           <li class="gallery-item"><figure class="gallery-card">
             <figcaption class="gallery-caption copy-highlight is-sm"><strong>Jarayon ko‘rinib turadi.</strong> Har bosqich o‘z chizig‘ida, bitta urg‘u rangida.</figcaption>
@@ -143,18 +143,20 @@
   </section>
 
   <section class="band band-alt" id="shablonlar" aria-label="Shablonlar">
-    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title">Shablonlar.</h2></div>
-    <div class="info-grid" style="padding-inline: 22px;">
+    <div class="narrow">
+      <div class="band-head"><h2 class="band-title">Shablonlar.</h2></div>
+      <div class="info-grid">
       <article class="info-card"><h3 class="info-title">Sayt</h3><p class="info-text">Ribbon, navigatsiya, tile'lar, galereya, savollar va footer — shu sahifaning o‘zi.</p><a class="btn btn-primary btn-xs" href="site.html">Ochish</a></article>
       <article class="info-card"><h3 class="info-title">Hujjat va PDF</h3><p class="info-text">Chop mavzusi: oq fon, qora matn, 11pt asosiy matn, 18 / 16 / 20mm chetlar.</p><a class="btn btn-primary btn-xs" href="../components/DocumentPage/example.html">Ochish</a></article>
       <article class="info-card"><h3 class="info-title">Ilova</h3><p class="info-text">Topbar, sahifa sarlavhasi, raqamlar qatori va ro‘yxatlar.</p><a class="btn btn-primary btn-xs" href="../components/Topbar/example.html">Ochish</a></article>
       <article class="info-card"><h3 class="info-title">Brend kitobi</h3><p class="info-text">Rang, tipografiya, ovoz va tekshiruv qoidalari.</p><a class="link-more" href="https://github.com/uzbtrust/design-system/blob/main/docs/brand.md">O‘qish</a></article>
+      </div>
     </div>
   </section>
 
   <section class="band" id="savollar" aria-label="Savollar">
-    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title">Savollar.</h2></div>
-    <div style="padding-inline: 22px;">
+    <div class="narrow">
+      <div class="band-head"><h2 class="band-title">Savollar.</h2></div>
       <div class="accordion">
         <details class="accordion-item" name="faq" open>
           <summary class="accordion-head"><span>Tizimni qanday ulayman?</span><svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14" /><path class="v" d="M12 5v14" /></svg></summary>

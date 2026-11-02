@@ -96,6 +96,15 @@ Tuzilma, ma’lumot va funksiya o‘zgarmaydi — faqat ko‘rinish va ovoz.
 - Karta to‘ri: 1 ustun → 2 (600px dan) → 3 (960px dan); oraliq 16px, keng ekranda 20px. Yolg‘iz qolgan oxirgi karta butun qatorni egallaydi.
 - Mobil birinchi: 375, 768 va 1440px. Gorizontal skroll bo‘lmasin: keng jadval o‘z konteynerida skroll qiladi yoki kartaga aylanadi.
 
+## Yordamchi klasslar
+
+- **Kenglik:** `.wrap` — kontent eni `max` (1120px) va `gutter` chetlar; `.narrow` — sayt ustuni `max-narrow` (980px) va `gutter` chetlar. Band ichidagi `band-head`, `info-grid`, `accordion`, `specs` ni `.narrow` ga o‘rang — hammasi bir chiziqda turadi. O‘z CSS'ingizda kenglik va chet yozmang.
+- **Bo‘lim:** `.band` — sayt bo‘limi (`band-y` yuqori-past); `.band-alt` — kulrang fon, ichidagi karta yuzalari avtomatik oq (`bg-elev`). `.band-head` + `.band-title` — bo‘lim sarlavhasi, o‘ngda `link-more`.
+- **To‘r:** `.card-grid` — 1 → 2 → 3 ustun (`Card`); `.info-grid` — 2 ustun, `.info-grid.is-3` — 3 ustun (`InfoCard`); `.tile-grid` (`Tile`).
+- **Forma:** `.form` — maydonlar ustuni, oraliq 18px.
+- **Matn:** `.eyebrow`, `.eyebrow-new`, `.dim`, `.copy-highlight` (`.is-sm`), `.num` — `tabular-nums`.
+- **Kirish imkoniyati:** `.sr-only` — faqat ekran o‘quvchi uchun; `.skip-link` — «Kontentga o‘tish» havolasi, `<body>` boshida. `hidden` atributi har qanday komponentni yashiradi.
+
 ## Yuzalar, radius, soya
 
 - **Karta:** `card` foni, `r-lg`, soyasiz. Ekranda hoverda `bg-elev` + `shadow-md` + 4px ko‘tariladi; katta raqam va strelka `accent` ga aylanadi.

@@ -22,6 +22,10 @@ Bitta CSS fayl — tokenlar va barcha komponentlar:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/assets/Logos/uzbtrust-logo.png" type="image/png">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/assets/Logos/uzbtrust-logo.svg" type="image/svg+xml">
   <script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/dist/uzbtrust.css">
 </head>
@@ -31,6 +35,19 @@ Bitta CSS fayl — tokenlar va barcha komponentlar:
 - React, Vue va boshqalar: shu CSS'ni global ulang, komponent README'sidagi HTML tuzilmasini o‘sha freymvorkda takrorlang. Klass nomlari o‘zgarmaydi.
 - Rang, oraliq, radius, soya — faqat `var(--…)` orqali. Hex yoki px'ni qo‘lda yozmang. Barcha tokenlar: `tokens.json`.
 - Mavzu: `<html data-theme="light|dark|print">`. Bitta blokni qorong‘u qilish: o‘sha blokka `data-theme="dark"`.
+- Maket: sahifa bo‘limi — `<section class="band">` (kulrang — `band band-alt`), ichida kontent `.narrow` (980px) yoki `.wrap` (1120px) ga o‘raladi; o‘z CSS'ingizda kenglik va chet yozmang. Yordamchi klasslarning to‘liq ro‘yxati: `docs/brand.md` → «Yordamchi klasslar».
+
+## Qaysi komponent
+
+| Kerak | Komponent |
+|---|---|
+| Forma (ro‘yxatdan o‘tish, ariza, aloqa) | `Field` — `.form` ichida; xato `aria-invalid` + `field-hint tone-bad` |
+| Kirish oynasi (login va parol) | `StackedFields` |
+| Afzallik yoki xususiyat kartalari | `InfoCard` — `info-grid is-3`, tugma ixtiyoriy |
+| Bosiladigan kartalar (bo‘lim, hujjat) | `Card` — `card-grid` ichida |
+| Savol-javob | `Accordion` |
+| Sahifa boshi | `Hero` (`<section class="hero wrap">`), video bo‘lsa `VideoHero` |
+| Yuborilgandan keyingi xabar | `Notice` (joyida) yoki `Toast` |
 
 ## Resurslar
 

@@ -1375,6 +1375,8 @@ svg {
 
 /* ---- Formalar ------------------------------------------------------------- */
 .form {
+  display: flex;
+  flex-direction: column;
   gap: 18px;
 }
 .field {
@@ -1477,6 +1479,18 @@ textarea.input {
 .field-hint.tone-warn {
   color: var(--warn);
   font-weight: 500;
+}
+.field-hint.tone-bad {
+  color: var(--bad);
+  font-weight: 500;
+}
+.input[aria-invalid="true"] {
+  box-shadow: inset 0 0 0 1.5px var(--bad);
+}
+.input[aria-invalid="true"]:focus {
+  box-shadow:
+    inset 0 0 0 1.5px var(--bad),
+    0 0 0 4px var(--bad-soft);
 }
 .error-message {
   padding: 10px 14px;
@@ -4466,6 +4480,82 @@ kbd {
   }
   .specs-row {
     break-inside: avoid;
+  }
+}
+
+/* ---- 98 · Maket yordamchilari ------------------------------------------------ */
+[hidden] {
+  display: none !important;
+}
+
+/* Sayt ustuni: max-narrow + chetlar. Ichidagi band-head, info-grid, accordion, specs bir chiziqda turadi. */
+.narrow {
+  width: 100%;
+  max-width: calc(var(--max-narrow) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.narrow > .band-head {
+  max-width: none;
+  padding-inline: 0;
+}
+
+/* Kulrang band ichida karta yuzalari bg-elev bo‘ladi: yorug‘da oq, qorong‘uda #1c1c1e */
+.band-alt {
+  --card: var(--bg-elev);
+}
+
+/* Karta to‘ri: 1 → 2 (600px) → 3 (960px) ustun; yolg‘iz qolgan oxirgi karta butun qatorni oladi */
+.card-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+@media (min-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .card-grid > :last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+  .card-grid > :last-child:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* InfoCard: uch ustunli to‘r */
+.info-grid.is-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 833px) {
+  .info-grid.is-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 734px) {
+  .info-grid.is-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* GlobalNav: 2–4 bo‘lim bo‘lsa o‘ngga yig‘iladi */
+.globalnav-list.is-few {
+  justify-content: flex-end;
+  gap: 8px;
+}
+@media (max-width: 833px) {
+  .globalnav-list.is-few {
+    justify-content: flex-start;
+    gap: 0;
   }
 }
 

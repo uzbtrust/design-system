@@ -1,6 +1,6 @@
 # StackedFields
 
-Bir-biriga yopishgan maydonlar guruhi: kirish, ro‘yxatdan o‘tish, parol.
+Bir-biriga yopishgan maydonlar guruhi: faqat kirish oynasi va hisob ochish (login, parol). Tadbirga ro‘yxat, ariza va boshqa formalar — `Field`.
 
 ## Tuzilma
 ```html

@@ -9,10 +9,10 @@
 <style>
   body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
   .pv-logo { display: grid; grid-template-columns: 200px 200px 1fr; gap: 20px; }
-  .tile { display: grid; place-items: center; height: 200px; border-radius: var(--r-lg); background: var(--bg-alt); }
-  .tile.on-black { background: var(--bg); box-shadow: inset 0 0 0 1px var(--line); }
-  .tile img { width: 112px; height: auto; }
-  .tile.on-white { background: #ffffff; box-shadow: inset 0 0 0 1px var(--line-soft); }
+  .logo-tile { display: grid; place-items: center; height: 200px; border-radius: var(--r-lg); background: var(--bg-alt); }
+  .logo-tile.on-black { background: var(--bg); box-shadow: inset 0 0 0 1px var(--line); }
+  .logo-tile img { width: 112px; height: auto; }
+  .logo-tile.on-white { background: #ffffff; box-shadow: inset 0 0 0 1px var(--line-soft); }
   .lockups { display: flex; flex-direction: column; justify-content: center; gap: 28px; }
   .lockup { display: inline-flex; align-items: center; color: var(--fg); font-weight: 600; letter-spacing: var(--track-body); line-height: 1; }
   .lockup img { display: block; height: auto; }
@@ -28,11 +28,11 @@
 <body>
 <div class="pv-logo">
   <div>
-    <div class="tile on-white"><img src="../../assets/Logos/uzbtrust-logo.svg" alt="uzbtrust" style="width: 200px"></div>
+    <div class="logo-tile on-white"><img src="../../assets/Logos/uzbtrust-logo.svg" alt="uzbtrust" style="width: 200px"></div>
     <p class="caption">uzbtrust-logo.svg — ikonka, favicon</p>
   </div>
   <div>
-    <div class="tile on-black" data-theme="dark"><img src="../../assets/Logos/uzbtrust-star.svg" alt="uzbtrust"></div>
+    <div class="logo-tile on-black" data-theme="dark"><img src="../../assets/Logos/uzbtrust-star.svg" alt="uzbtrust"></div>
     <p class="caption">Qora fonda ham shu ko‘k</p>
   </div>
   <div class="lockups">

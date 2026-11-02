@@ -24,5 +24,5 @@ Bosiladigan karta: kichik eyebrow yoki haqiqiy ko‘rsatkich, sarlavha, qisqa iz
 - Tepada — kichik `eyebrow` (tur, bo‘lim) yoki haqiqiy ko‘rsatkich `card-num` (56 → 72px, 600): son, foiz, soat. Tartib raqami (01, 02) bezak sifatida yozilmaydi.
 - Sarlavha 22 → 26px/600, `track-title`; izoh 15px `fg-3`, 2 qatorgacha. Meta 13px `fg-3`, `·` bilan ajraladi.
 - Hover: `bg-elev` (qorong‘uda #232325), `shadow-md`, −4px; ko‘rsatkich `accent`; strelka doirasi `accent` fon va oq ikon. Bosish `scale(.98)`.
-- To‘r: 1 → 2 → 3 ustun (600 / 960px), oraliq 16 → 20px. Yolg‘iz karta 640px dan keng bo‘lsa, yuqori qism chapga, matn o‘ngga o‘tadi.
+- To‘r — `<div class="card-grid">` ichida `card-item` lar: 1 → 2 → 3 ustun (600 / 960px), oraliq 16 → 20px. Yolg‘iz karta 640px dan keng bo‘lsa, yuqori qism chapga, matn o‘ngga o‘tadi.
 - Hujjat va slaydda: hover va strelka yo‘q; chopda (`print`) fon o‘rniga 1px chiziq.

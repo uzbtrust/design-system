@@ -20,3 +20,4 @@ Markazlashgan katta kirish bloki: eyebrow, ikki qatorli ulkan sarlavha (ikkinchi
 - Fon toza `bg` (yoki `bg-alt` bandi) — gradient va rangli nur yo‘q.
 - Kirish: `.rise` zinapoyasi (`--i` = 0, 1, 2, 3; 70ms qadam).
 - Chop etiladigan hujjat muqovasida: sarlavha 26pt chapga tekislangan, tugmalar yo‘q (README → Hujjat va PDF).
+- `.login` o‘rami faqat kirish oynasida kerak. Bosh sahifa yoki landing'da `<section class="hero wrap">` ning o‘zi yetarli.
