@@ -38,13 +38,14 @@ Logo, ikon va belgilarni shu repodan oling. Qayta chizmang, taxminiy nusxa yasam
 
 | Nima | Manzil |
 |---|---|
-| Logo (bo‘sh joyli, favicon/ikonka) | `https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/assets/Logos/uzbtrust-logo.png` |
-| Yulduz (matn yonida, navigatsiyada) | `https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/assets/Logos/uzbtrust-star.png` |
+| Logo (bo‘sh joyli, favicon/ikonka) | `https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/assets/Logos/uzbtrust-logo.svg` |
+| Yulduz (matn yonida, navigatsiyada) | `https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/assets/Logos/uzbtrust-star.svg` |
 | Ikonlar (Lucide 0.577.0, 43 ta) | `https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/assets/Icons/<nom>.svg` |
 | Mahsulot belgisi namunalari | `assets/Marks/` |
 
 - Ikonni sahifaga inline SVG qilib qo‘ying: `stroke="currentColor"`, `stroke-width="1.75"`, 16–24px. Kerakli ikon yo‘q bo‘lsa — Lucide 0.577.0 dan xuddi shu parametrlar bilan.
 - Logo rangi `#0071E3`, qorong‘u fonda ham o‘zgarmaydi; ko‘k yoki rangli fon ustiga qo‘yilmaydi.
+- Logo — SVG (asosiy). SVG qabul qilinmaydigan joyda (ba’zi ijtimoiy tarmoqlar, ofis dasturlari) xuddi shu manzildagi `.png` zaxirani oling. Favicon: avval PNG, keyin SVG `<link rel="icon">`.
 
 ## Asosiy qoidalar (qisqa)
 
