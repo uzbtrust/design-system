@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>LinkCard</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+
+</style>
+</head>
+<body>
+<div class="pv-stack">
+  <div class="link-adder"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 17H7A5 5 0 0 1 7 7h2" /><path d="M15 7h2a5 5 0 1 1 0 10h-2" /><line x1="8" x2="16" y1="12" y2="12" /></svg><input type="url" placeholder="Pinterest, Behance yoki boshqa havola" aria-label="Havola" /><button class="chip-button is-on" type="button">Qo‘shish</button></div>
+  <ul class="link-cards">
+    <li class="link-card"><a class="link-open" href="#"><span class="link-badge site-pinterest" aria-hidden="true">P</span><span class="link-meta"><strong>Pinterest</strong><small>pinterest.com/ideas</small></span><svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a><button class="icon-button is-danger" type="button" aria-label="Pinterest havolasini olib tashlash"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button></li>
+    <li class="link-card"><a class="link-open" href="#"><span class="link-badge site-behance" aria-hidden="true">B</span><span class="link-meta"><strong>Behance</strong><small>behance.net/gallery</small></span><svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a><button class="icon-button is-danger" type="button" aria-label="Behance havolasini olib tashlash"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button></li>
+    <li class="link-card"><a class="link-open" href="#"><span class="link-badge site-figma" aria-hidden="true">F</span><span class="link-meta"><strong>Figma</strong><small>figma.com/file</small></span><svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a><button class="icon-button is-danger" type="button" aria-label="Figma havolasini olib tashlash"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button></li>
+    <li class="link-card"><a class="link-open" href="#"><span class="link-badge" aria-hidden="true">E</span><span class="link-meta"><strong>example.uz</strong><small>example.uz/maqola</small></span><svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a><button class="icon-button is-danger" type="button" aria-label="example.uz havolasini olib tashlash"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button></li>
+  </ul>
+</div>
+</body>
+</html>

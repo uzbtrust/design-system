@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>StatsTable</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+  .stats-table { --cols: minmax(150px, 1.3fr) minmax(150px, 1.5fr) 64px 100px minmax(90px, 1fr); }
+</style>
+</head>
+<body>
+<div class="stats-table" role="table" aria-label="Bo‘limlar natijasi">
+  <div class="stats-head" role="row"><span role="columnheader">Bo‘lim</span><span role="columnheader">Natija</span><span role="columnheader">Soni</span><span role="columnheader">Vaqtida</span><span role="columnheader">O‘rtacha</span></div>
+  <div class="stats-row" role="row">
+    <span class="stats-person" role="cell"><span class="avatar avatar-sm">A</span><strong>A bo‘lim</strong></span>
+    <span class="stats-bar-cell" role="cell" data-label="Natija"><span class="stats-bar"><span style="width: 100%"></span></span><span class="stats-num">42</span></span>
+    <span class="stats-num" role="cell" data-label="Soni">14</span>
+    <span class="stats-ontime" role="cell" data-label="Vaqtida"><span class="stats-num">92%</span><small>12/13</small></span>
+    <span class="stats-text" role="cell" data-label="O‘rtacha">1 kun</span>
+  </div>
+  <div class="stats-row" role="row">
+    <span class="stats-person" role="cell"><span class="avatar avatar-sm">B</span><strong>B bo‘lim</strong></span>
+    <span class="stats-bar-cell" role="cell" data-label="Natija"><span class="stats-bar"><span style="width: 64%"></span></span><span class="stats-num">27</span></span>
+    <span class="stats-num" role="cell" data-label="Soni">9</span>
+    <span class="stats-ontime" role="cell" data-label="Vaqtida"><span class="stats-num">78%</span><small>7/9</small></span>
+    <span class="stats-text" role="cell" data-label="O‘rtacha">2 kun</span>
+  </div>
+  <div class="stats-row" role="row">
+    <span class="stats-person" role="cell"><span class="avatar avatar-sm">C</span><strong>C bo‘lim</strong></span>
+    <span class="stats-bar-cell" role="cell" data-label="Natija"><span class="stats-bar"><span style="width: 26%"></span></span><span class="stats-num">11</span></span>
+    <span class="stats-num" role="cell" data-label="Soni">4</span>
+    <span class="stats-ontime" role="cell" data-label="Vaqtida"><span class="stats-num is-low">50%</span><small>2/4</small></span>
+    <span class="stats-text" role="cell" data-label="O‘rtacha">3 kun</span>
+  </div>
+</div>
+</body>
+</html>

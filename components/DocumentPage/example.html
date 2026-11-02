@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>DocumentPage</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+  html, body { background: var(--bg-alt); }
+  /* A4 = 210 × 297mm → 595 × 842px (72 dpi); chetlari 18 / 16 / 20mm */
+  .a4 { box-sizing: border-box; width: 595px; min-height: 842px; margin: 0 auto; padding: 51px 45px 57px; background: var(--bg); color: var(--fg); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.08); font-size: 11px; line-height: 1.45; }
+  .doc-eyebrow { font-size: 9px; font-weight: 600; letter-spacing: -0.01em; color: var(--fg-3); }
+  .doc-title { margin: 6px 0 0; font-size: 26px; font-weight: 600; line-height: 1.1; letter-spacing: -0.003em; }
+  .doc-title .dim { color: var(--fg-3); }
+  .doc-lead { margin: 8px 0 0; font-size: 12px; line-height: 1.4; color: #333; }
+  .doc-head { padding-bottom: 23px; margin-bottom: 23px; border-bottom: 1px solid #999; }
+  .doc-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 22px; padding: 0; list-style: none; }
+  .doc-facts strong { display: block; font-size: 28px; font-weight: 600; line-height: 1; letter-spacing: 0.004em; font-variant-numeric: tabular-nums; }
+  .doc-facts span { font-size: 9px; color: var(--fg-3); }
+  .doc-h2 { margin: 20px 0 6px; font-size: 16px; font-weight: 600; line-height: 1.1; letter-spacing: 0.009em; break-after: avoid; }
+  .doc-p { margin: 0 0 8px; text-wrap: pretty; orphans: 3; widows: 3; }
+  .doc-box { margin: 14px 0; padding: 12px 14px; border: 1px solid #aaa; border-radius: 6px; break-inside: avoid; }
+  .doc-box-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+  .doc-box-head strong { font-size: 11px; font-weight: 600; }
+  .doc-box-head small, .doc-small { font-size: 9px; color: var(--fg-3); }
+  .doc-bars { display: grid; grid-template-columns: repeat(12, 1fr); align-items: end; gap: 3px; height: 90px; border-bottom: 1px solid var(--line); }
+  .doc-bars span { display: block; background: var(--accent); border-radius: 2px 2px 0 0; }
+  .doc-x { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; margin-top: 4px; font-size: 7px; color: var(--fg-3); text-align: center; font-variant-numeric: tabular-nums; }
+  .doc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; break-inside: avoid; }
+  .doc-table th { padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 9px; font-weight: 600; letter-spacing: -0.01em; color: var(--fg-3); text-align: left; }
+  .doc-table td { padding: 5px 0; border-bottom: 1px solid var(--line-soft); }
+  .doc-table td:not(:first-child), .doc-table th:not(:first-child) { text-align: right; }
+</style>
+</head>
+<body>
+<article class="a4" data-theme="print">
+  <header class="doc-head">
+    <p class="doc-eyebrow">Hisobot · 2026</p>
+    <h1 class="doc-title">Yil yakunlari.<br><span class="dim">Kam so‘z, aniq raqam.</span></h1>
+    <p class="doc-lead">Bir yilda nima qilindi, nimani o‘rgandik va keyingi yil nimadan boshlaymiz.</p>
+  </header>
+  <ul class="doc-facts">
+    <li><strong>12</strong><span>loyiha yakunlandi</span></li>
+    <li><strong>186</strong><span>sahifa hujjat</span></li>
+    <li><strong>94%</strong><span>muddatida</span></li>
+  </ul>
+  <h2 class="doc-h2">Asosiy natijalar</h2>
+  <p class="doc-p">Yil davomida o‘n ikkita loyiha yakunlandi. Ularning aksariyati belgilangan muddatda topshirildi, kechikishlar esa asosan kuz oylariga to‘g‘ri keldi.</p>
+  <p class="doc-p">Eng katta o‘sish ikkinchi yarim yillikda bo‘ldi: oylik natija uch barobar oshdi. Quyidagi grafik har oy yakunlangan ishlar sonini ko‘rsatadi.</p>
+  <figure class="doc-box">
+    <div class="doc-box-head"><strong>Oylik natija</strong><small>Jami 102 · 12 oy</small></div>
+    <div class="doc-bars"><span style="height: 21.428571428571427%"></span><span style="height: 35.714285714285715%"></span><span style="height: 28.57142857142857%"></span><span style="height: 42.857142857142854%"></span><span style="height: 57.14285714285714%"></span><span style="height: 50%"></span><span style="height: 64.28571428571429%"></span><span style="height: 78.57142857142857%"></span><span style="height: 71.42857142857143%"></span><span style="height: 85.71428571428571%"></span><span style="height: 100%"></span><span style="height: 92.85714285714286%"></span></div>
+    <div class="doc-x"><span>Yan</span><span>Fev</span><span>Mar</span><span>Apr</span><span>May</span><span>Iyn</span><span>Iyl</span><span>Avg</span><span>Sen</span><span>Okt</span><span>Noy</span><span>Dek</span></div>
+  </figure>
+  <h2 class="doc-h2">Bo‘limlar bo‘yicha</h2>
+  <table class="doc-table">
+    <thead><tr><th>Bo‘lim</th><th>Loyiha</th><th>Sahifa</th><th>Muddatida</th></tr></thead>
+    <tbody>
+      <tr><td>A bo‘lim</td><td>5</td><td>84</td><td>100%</td></tr>
+      <tr><td>B bo‘lim</td><td>4</td><td>61</td><td>92%</td></tr>
+      <tr><td>C bo‘lim</td><td>3</td><td>41</td><td>86%</td></tr>
+    </tbody>
+  </table>
+  <p class="doc-small" style="margin-top: 14px">Manba: ichki hisob, 2026-yil 29-oktabr holatiga.</p>
+</article>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>ChipButton</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+
+</style>
+</head>
+<body>
+<div class="pv-stack">
+  <div class="pv-row" role="group" aria-label="Tezkor muddat">
+    <button class="chip-button is-on" type="button" aria-pressed="true">Bugun</button>
+    <button class="chip-button" type="button" aria-pressed="false">Ertaga</button>
+    <button class="chip-button" type="button" aria-pressed="false">3 kun</button>
+    <button class="chip-button" type="button" aria-pressed="false">1 hafta</button>
+  </div>
+  <div class="pv-row">
+    <button class="quiet-button" type="button" aria-pressed="true">Yechimlarni ochish</button>
+    <button class="quiet-button" type="button">Taqdimot</button>
+    <button class="quiet-button" type="button">Chop etish</button>
+    <span class="text-sm" style="color: var(--fg-3)">Qidirish <kbd>⌘</kbd> <kbd>K</kbd></span>
+  </div>
+</div>
+<script>
+document.querySelectorAll("[role=group] .chip-button").forEach(function (b, _, all) {
+  b.addEventListener("click", function () {
+    all.forEach(function (x) { var on = x === b; x.classList.toggle("is-on", on); x.setAttribute("aria-pressed", String(on)); });
+  });
+});
+document.querySelectorAll(".quiet-button").forEach(function (b) {
+  b.addEventListener("click", function () { if (b.hasAttribute("aria-pressed")) b.setAttribute("aria-pressed", String(b.getAttribute("aria-pressed") !== "true")); });
+});
+</script>
+</body>
+</html>

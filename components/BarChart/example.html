@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>BarChart</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+
+</style>
+</head>
+<body>
+<figure class="chart" id="chart">
+  <figcaption class="chart-head"><span><strong>Kunlik natija</strong><small id="sum"></small></span><span class="chart-best" id="best"></span></figcaption>
+  <div class="chart-body">
+    <div class="chart-y" aria-hidden="true"><span>6</span><span>3</span><span>0</span></div>
+    <div class="chart-plot" id="plot">
+      <span class="chart-gridline" style="bottom: 100%"></span>
+      <span class="chart-gridline" style="bottom: 50%"></span>
+      <div class="chart-bars" id="bars"></div>
+    </div>
+  </div>
+  <div class="chart-x" id="x" aria-hidden="true"></div>
+</figure>
+<script>
+var values = [2, 4, 0, 3, 5, 6, 1, 0, 3, 4, 2, 5, 3, 4], n = values.length, scale = 6;
+var short = ["yan", "fev", "mar", "apr", "may", "iyn", "iyl", "avg", "sen", "okt", "noy", "dek"];
+var day = function (i) { var d = new Date(); d.setDate(d.getDate() - (n - 1 - i)); return d.getDate() + "-" + short[d.getMonth()]; };
+var cols = "repeat(" + n + ", minmax(0, 1fr))", bars = document.getElementById("bars"), x = document.getElementById("x"), plot = document.getElementById("plot");
+bars.style.gridTemplateColumns = cols; x.style.gridTemplateColumns = cols;
+var total = values.reduce(function (a, b) { return a + b; }, 0), max = Math.max.apply(null, values);
+document.getElementById("sum").textContent = total + " ta · " + n + " kun";
+document.getElementById("best").textContent = "Eng ko‘p: " + day(values.indexOf(max)) + " — " + max + " ta";
+var tip = null;
+values.forEach(function (v, i) {
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "chart-bar" + (v ? "" : " is-zero");
+  b.style.setProperty("--h", (v / scale) * 100 + "%");
+  b.setAttribute("aria-label", day(i) + ": " + v + " ta");
+  b.innerHTML = '<span class="bar-fill"></span>';
+  var show = function () {
+    bars.querySelectorAll(".chart-bar").forEach(function (o) { o.classList.toggle("is-active", o === b); });
+    if (tip) tip.remove();
+    tip = document.createElement("div");
+    tip.className = "chart-tip" + (i > n * 0.7 ? " is-left" : i < n * 0.3 ? " is-right" : "");
+    tip.style.left = ((i + 0.5) / n) * 100 + "%";
+    tip.style.bottom = "calc(" + Math.min(78, (v / scale) * 100) + "% + 10px)";
+    tip.innerHTML = "<strong>" + v + " ta</strong><span>" + (i === n - 1 ? "Bugun" : day(i)) + "</span>";
+    plot.appendChild(tip);
+  };
+  b.onmouseenter = show; b.onfocus = show;
+  bars.appendChild(b);
+  var s = document.createElement("span");
+  s.textContent = i === n - 1 ? "Bugun" : (n - 1 - i) % 2 === 0 && n - 1 - i > 1 ? day(i) : "";
+  x.appendChild(s);
+});
+plot.onmouseleave = function () { if (tip) tip.remove(); tip = null; bars.querySelectorAll(".is-active").forEach(function (o) { o.classList.remove("is-active"); }); };
+</script>
+</body>
+</html>

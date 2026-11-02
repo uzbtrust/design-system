@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>uzbtrust — namuna sayt</title>
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<link rel="stylesheet" href="../dist/uzbtrust.css">
+<link rel="icon" href="../assets/Logos/uzbtrust-logo.png">
+<style>
+  /* Faqat shu namunaga tegishli vizuallar — tizim tokenlari bilan */
+  .demo-aa { font-size: clamp(8rem, 5rem + 14vw, 15rem); font-weight: 600; letter-spacing: var(--track-super); line-height: 0.9; padding-bottom: 40px; }
+  .demo-dot { width: 180px; height: 180px; margin-bottom: 56px; border-radius: 50%; background: var(--accent); }
+  .demo-icons { display: grid; grid-template-columns: repeat(4, 48px); gap: 28px; padding-bottom: 64px; }
+  .demo-icons img { width: 48px; height: 48px; }
+  .demo-big { font-size: 96px; font-weight: 600; letter-spacing: var(--track-super); line-height: 1; font-variant-numeric: tabular-nums; }
+  .demo-big small { margin-left: 10px; color: var(--fg-3); font-size: var(--fs-intro); font-weight: 400; letter-spacing: var(--track-intro); }
+  .demo-bars { display: grid; gap: 14px; }
+  .demo-bar { height: 12px; border-radius: var(--r-pill); background: var(--fill); overflow: hidden; }
+  .demo-bar span { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+  .demo-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .intro { max-width: var(--max-narrow); margin: 0 auto var(--s-7); padding-inline: 22px; }
+</style>
+</head>
+<body>
+
+<aside class="ribbon" aria-label="E’lon">
+  <p class="ribbon-text">uzbtrust 1.0 chiqdi: sayt uchun yangi komponentlar. <a class="link-more" href="#komponentlar">Ko‘rish</a></p>
+</aside>
+
+<nav class="globalnav" aria-label="Asosiy">
+  <div class="globalnav-inner">
+    <a class="globalnav-brand" href="#"><img src="../assets/Logos/uzbtrust-star.png" alt="uzbtrust" width="18" height="18"></a>
+    <ul class="globalnav-list" id="gn-list">
+      <li><a class="globalnav-link" href="#" aria-current="page">Bosh sahifa</a></li>
+      <li><a class="globalnav-link" href="#tamoyillar">Tamoyillar</a></li>
+      <li><a class="globalnav-link" href="#komponentlar">Komponentlar</a></li>
+      <li><a class="globalnav-link" href="#shablonlar">Shablonlar</a></li>
+      <li><a class="globalnav-link" href="#savollar">Savollar</a></li>
+      <li><a class="globalnav-link" href="https://github.com/uzbtrust/design-system">GitHub</a></li>
+    </ul>
+    <div class="globalnav-actions">
+      <button class="globalnav-icon" type="button" aria-label="Qidirish"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg></button>
+      <button class="globalnav-icon globalnav-menu" type="button" aria-label="Menyu" aria-expanded="false" aria-controls="gn-list"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path class="line line-1" d="M4 8.5h16" /><path class="line line-2" d="M4 15.5h16" /></svg></button>
+    </div>
+  </div>
+</nav>
+
+<nav class="localnav" aria-label="Sahifa bo‘limlari">
+  <div class="localnav-inner">
+    <a class="localnav-title" href="#">uzbtrust</a>
+    <ul class="localnav-links" id="ln-links">
+      <li><a class="localnav-link" aria-current="page">Umumiy</a></li>
+      <li><a class="localnav-link" href="#komponentlar">Komponentlar</a></li>
+      <li><a class="localnav-link" href="#shablonlar">Shablonlar</a></li>
+      <li><a class="localnav-link" href="#savollar">Savollar</a></li>
+    </ul>
+    <button class="localnav-toggle" type="button" aria-label="Bo‘limlar" aria-expanded="false" aria-controls="ln-links"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+    <a class="btn btn-primary btn-xs" href="https://github.com/uzbtrust/design-system/archive/refs/heads/main.zip">Yuklab olish</a>
+  </div>
+</nav>
+
+<main>
+  <section class="tile-grid" aria-label="Asosiy">
+    <article class="tile tile-hero" data-theme="dark">
+      <div class="tile-copy">
+        <p class="eyebrow eyebrow-new">Yangi</p>
+        <h1 class="tile-title">Bir til. Har qanday ish.</h1>
+        <p class="tile-sub">Sayt, PDF, slayd — bir qo‘l ishi.</p>
+        <div class="tile-ctas">
+          <a class="btn btn-primary" href="#tamoyillar">Batafsil</a>
+          <a class="btn btn-secondary" href="https://github.com/uzbtrust/design-system">GitHub</a>
+        </div>
+        <p class="tile-callout">Bitta CSS fayl · 38 komponent</p>
+      </div>
+      <div class="tile-media" aria-hidden="true"><p class="demo-aa">Aa</p></div>
+    </article>
+    <article class="tile">
+      <div class="tile-copy">
+        <h2 class="tile-title">Bitta urg‘u.</h2>
+        <p class="tile-sub">Ko‘k — faqat asosiy amal uchun.</p>
+        <div class="tile-ctas"><a class="btn btn-primary" href="#tamoyillar">Rang</a></div>
+      </div>
+      <div class="tile-media" aria-hidden="true"><span class="demo-dot"></span></div>
+    </article>
+    <article class="tile" data-theme="dark">
+      <div class="tile-copy">
+        <h2 class="tile-title">Ikonlar.</h2>
+        <p class="tile-sub">Lucide, 1.75 chiziq.</p>
+        <div class="tile-ctas">
+          <a class="btn btn-primary" href="https://github.com/uzbtrust/design-system/tree/main/assets/Icons">Ko‘rish</a>
+          <a class="btn btn-secondary" href="https://lucide.dev">Lucide</a>
+        </div>
+      </div>
+      <div class="tile-media" aria-hidden="true">
+        <div class="demo-icons">
+          <img src="../assets/Icons/search.svg" alt=""><img src="../assets/Icons/calendar-days.svg" alt=""><img src="../assets/Icons/file-text.svg" alt=""><img src="../assets/Icons/users.svg" alt="">
+          <img src="../assets/Icons/download.svg" alt=""><img src="../assets/Icons/bar-chart-3.svg" alt=""><img src="../assets/Icons/inbox.svg" alt=""><img src="../assets/Icons/star.svg" alt="">
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="band" id="tamoyillar" aria-label="Tamoyillar">
+    <div class="intro">
+      <p class="copy-highlight"><strong>Bo‘sh joy — dizayn.</strong> Katta sarlavha, kulrang davomi va bitta urg‘u rangi. Shubha bo‘lsa, chiziq, quti yoki yorliqni olib tashlang. <strong>Tipografiya ishni bajaradi.</strong></p>
+    </div>
+    <div id="komponentlar">
+      <div class="band-head"><h2 class="band-title">Bir qarashda.</h2><a class="link-more" href="https://github.com/uzbtrust/design-system/tree/main/components">Hammasi</a></div>
+      <div class="gallery">
+        <ul class="gallery-track">
+          <li class="gallery-item"><figure class="gallery-card">
+            <figcaption class="gallery-caption copy-highlight is-sm"><strong>Raqam so‘zdan kuchli.</strong> Har bo‘limda bitta asosiy ko‘rsatkich va uning qisqa izohi.</figcaption>
+            <p class="demo-big">38<small>komponent</small></p>
+          </figure></li>
+          <li class="gallery-item"><figure class="gallery-card">
+            <figcaption class="gallery-caption copy-highlight is-sm"><strong>Jarayon ko‘rinib turadi.</strong> Har bosqich o‘z chizig‘ida, bitta urg‘u rangida.</figcaption>
+            <div class="demo-bars" aria-hidden="true"><div class="demo-bar"><span style="width: 92%"></span></div><div class="demo-bar"><span style="width: 68%"></span></div><div class="demo-bar"><span style="width: 41%"></span></div></div>
+          </figure></li>
+          <li class="gallery-item"><figure class="gallery-card">
+            <figcaption class="gallery-caption copy-highlight is-sm"><strong>Holat so‘z bilan aytiladi.</strong> Rang yolg‘iz kelmaydi.</figcaption>
+            <div class="demo-tags"><span class="tag">Ochiq</span><span class="tag tag-priority-2">Bugun</span><span class="tag tag-bad">2 kun kechikdi</span><span class="tag">Tayyor</span></div>
+          </figure></li>
+          <li class="gallery-item"><figure class="gallery-card">
+            <figcaption class="gallery-caption copy-highlight is-sm"><strong>Uch mavzu.</strong> Yorug‘, qorong‘u va chop — tokenlar o‘zi almashadi.</figcaption>
+          </figure></li>
+        </ul>
+        <div class="gallery-controls">
+          <div class="dotnav">
+            <button class="dotnav-dot" type="button" aria-label="1-karta" aria-current="true"></button>
+            <button class="dotnav-dot" type="button" aria-label="2-karta" aria-current="false"></button>
+            <button class="dotnav-dot" type="button" aria-label="3-karta" aria-current="false"></button>
+            <button class="dotnav-dot" type="button" aria-label="4-karta" aria-current="false"></button>
+          </div>
+          <div class="paddlenav">
+            <button class="paddle" type="button" data-dir="-1" aria-label="Oldingi" disabled><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+            <button class="paddle" type="button" data-dir="1" aria-label="Keyingi"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="shablonlar" aria-label="Shablonlar">
+    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title">Shablonlar.</h2></div>
+    <div class="info-grid" style="padding-inline: 22px;">
+      <article class="info-card"><h3 class="info-title">Sayt</h3><p class="info-text">Ribbon, navigatsiya, tile'lar, galereya, savollar va footer — shu sahifaning o‘zi.</p><a class="btn btn-primary btn-xs" href="site.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Hujjat va PDF</h3><p class="info-text">Chop mavzusi: oq fon, qora matn, 11pt asosiy matn, 18 / 16 / 20mm chetlar.</p><a class="btn btn-primary btn-xs" href="../components/DocumentPage/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Ilova</h3><p class="info-text">Topbar, sahifa sarlavhasi, raqamlar qatori va ro‘yxatlar.</p><a class="btn btn-primary btn-xs" href="../components/Topbar/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Brend kitobi</h3><p class="info-text">Rang, tipografiya, ovoz va tekshiruv qoidalari.</p><a class="link-more" href="https://github.com/uzbtrust/design-system/blob/main/docs/brand.md">O‘qish</a></article>
+    </div>
+  </section>
+
+  <section class="band" id="savollar" aria-label="Savollar">
+    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title">Savollar.</h2></div>
+    <div style="padding-inline: 22px;">
+      <div class="accordion">
+        <details class="accordion-item" name="faq" open>
+          <summary class="accordion-head"><span>Tizimni qanday ulayman?</span><svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14" /><path class="v" d="M12 5v14" /></svg></summary>
+          <div class="accordion-body"><p>Sahifaga bitta fayl ulanadi: <code>dist/uzbtrust.css</code>. Keyin komponent README'sidagi tuzilmani takrorlang.</p></div>
+        </details>
+        <details class="accordion-item" name="faq">
+          <summary class="accordion-head"><span>Shriftni alohida yuklash kerakmi?</span><svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14" /><path class="v" d="M12 5v14" /></svg></summary>
+          <div class="accordion-body"><p>Yo‘q. Apple qurilmalarida tizim shrifti — San Francisco — o‘zi ishlaydi; boshqa qurilmalarda Helvetica Neue yoki Arial.</p></div>
+        </details>
+        <details class="accordion-item" name="faq">
+          <summary class="accordion-head"><span>Bitta blokni qorong‘u qilsa bo‘ladimi?</span><svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14" /><path class="v" d="M12 5v14" /></svg></summary>
+          <div class="accordion-body"><p>Ha. O‘sha blokka <code>data-theme="dark"</code> qo‘ying — ichidagi tokenlar qorong‘u mavzuga o‘tadi.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <ol class="footnotes">
+      <li>Komponentlar soni 2026-yil noyabr holatiga.</li>
+    </ol>
+    <nav class="sitefoot-dir" aria-label="Sayt xaritasi">
+      <div class="sitefoot-col"><h3 class="sitefoot-title">Tizim</h3><ul><li><a href="https://github.com/uzbtrust/design-system/blob/main/docs/brand.md">Brend kitobi</a></li><li><a href="https://github.com/uzbtrust/design-system/blob/main/docs/01-ovoz.md">Ovoz va matn</a></li><li><a href="https://github.com/uzbtrust/design-system/blob/main/docs/02-harakat.md">Harakat</a></li></ul></div>
+      <div class="sitefoot-col"><h3 class="sitefoot-title">Sayt</h3><ul><li><a href="https://github.com/uzbtrust/design-system/blob/main/docs/04-sayt.md">Sayt qolipi</a></li><li><a href="../components/Tile/example.html">Tile</a></li><li><a href="../components/Gallery/example.html">Gallery</a></li></ul></div>
+      <div class="sitefoot-col"><h3 class="sitefoot-title">Resurslar</h3><ul><li><a href="https://github.com/uzbtrust/design-system/tree/main/assets/Logos">Logo</a></li><li><a href="https://github.com/uzbtrust/design-system/tree/main/assets/Icons">Ikonlar</a></li><li><a href="https://github.com/uzbtrust/design-system/blob/main/tokens.json">Tokenlar</a></li></ul></div>
+      <div class="sitefoot-col"><h3 class="sitefoot-title">Tekshiruv</h3><ul><li><a href="https://github.com/uzbtrust/design-system/blob/main/docs/03-tekshiruv.md">Ro‘yxat</a></li></ul></div>
+      <div class="sitefoot-col"><h3 class="sitefoot-title">Manba</h3><ul><li><a href="https://github.com/uzbtrust/design-system">GitHub</a></li></ul></div>
+    </nav>
+    <div class="sitefoot-legal">
+      <p class="sitefoot-copy">© 2026 uzbtrust.</p>
+      <ul class="sitefoot-links"><li><a href="https://github.com/uzbtrust/design-system">GitHub</a></li><li><a href="https://github.com/uzbtrust/design-system/blob/main/AGENTS.md">AI uchun</a></li></ul>
+      <p class="sitefoot-locale">O‘zbekiston</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var gn = document.querySelector(".globalnav"), gb = gn.querySelector(".globalnav-menu");
+  function setGn(open) { gn.classList.toggle("is-open", open); gb.setAttribute("aria-expanded", String(open)); }
+  gb.addEventListener("click", function () { setGn(!gn.classList.contains("is-open")); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && gn.classList.contains("is-open")) { setGn(false); gb.focus(); } });
+
+  var ln = document.querySelector(".localnav"), lt = ln.querySelector(".localnav-toggle");
+  lt.addEventListener("click", function () { var open = ln.classList.toggle("is-open"); lt.setAttribute("aria-expanded", String(open)); });
+
+  document.querySelectorAll(".gallery").forEach(function (g) {
+    var track = g.querySelector(".gallery-track"), items = track.children, dots = g.querySelectorAll(".dotnav-dot");
+    var prev = g.querySelector("[data-dir='-1']"), next = g.querySelector("[data-dir='1']");
+    var behavior = matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    function step() { return items[1] ? items[1].offsetLeft - items[0].offsetLeft : track.clientWidth; }
+    function update() {
+      var i = Math.round(track.scrollLeft / step());
+      dots.forEach(function (d, n) { d.setAttribute("aria-current", String(n === i)); });
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    }
+    [prev, next].forEach(function (b) { b.addEventListener("click", function () { track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: behavior }); }); });
+    dots.forEach(function (d, n) { d.addEventListener("click", function () { track.scrollTo({ left: n * step(), behavior: behavior }); }); });
+    track.addEventListener("scroll", function () { requestAnimationFrame(update); }, { passive: true });
+    update();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>Notice</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+  .banner { margin-top: 0; }
+</style>
+</head>
+<body>
+<div class="pv-stack" style="max-width: 560px">
+  <div class="notice" role="note"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" /></svg><p>Yangi versiya tayyor. O‘zgarishlar ertaga kuchga kiradi.</p></div>
+  <div class="notice is-warn" role="note"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20v-7a4 4 0 0 0-4-4H4" /><path d="M9 14 4 9l5-5" /></svg><p><strong>Qaytarildi:</strong> ikkinchi sahifadagi jadvalni yangilang.</p></div>
+  <div class="banner" role="alert"><span>Aloqa uzildi. Ma’lumotlar saqlanmagan bo‘lishi mumkin.</span><button class="btn-text" type="button">Qayta ulash</button></div>
+  <p class="error-message" role="alert">Login yoki parol noto‘g‘ri.</p>
+</div>
+</body>
+</html>

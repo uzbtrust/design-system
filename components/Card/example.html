@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>Card</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .card-num small { margin-left: 6px; color: var(--fg-3); font-size: 17px; font-weight: 400; letter-spacing: var(--track-body); }
+</style>
+</head>
+<body>
+<div class="pv-grid">
+  <div class="card-item">
+    <a class="card-tile" href="#">
+      <div class="card-top"><p class="eyebrow">Qo‘llanma</p><span class="card-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></span></div>
+      <div class="card-body"><h3 class="card-title">Tamoyillar</h3><p class="card-lead">Bo‘sh joy, tipografiya va bitta urg‘u rangi — hammasi shundan boshlanadi.</p></div>
+      <div class="card-foot"><div class="card-meta"><span>8 bo‘lim</span><span>12 daqiqa</span></div><div class="card-tags"><span class="tag tag-done">O‘qildi</span></div></div>
+    </a>
+  </div>
+  <div class="card-item">
+    <a class="card-tile" href="#">
+      <div class="card-top"><span class="card-num">94%<small>muddatida</small></span><span class="card-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></span></div>
+      <div class="card-body"><h3 class="card-title">Choraklik hisobot</h3><p class="card-lead">Uch oylik natijalar, asosiy raqamlar va keyingi qadamlar.</p></div>
+      <div class="card-foot"><div class="card-meta"><span>24 sahifa</span><span>6 grafik</span></div><div class="card-tags"><span class="tag tag-warn">Qoralama</span></div></div>
+    </a>
+  </div>
+</div>
+</body>
+</html>

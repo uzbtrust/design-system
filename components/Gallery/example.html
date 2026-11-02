@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>Gallery</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 40px 0 32px; background: var(--bg); }
+  .gallery-card { min-height: 360px; }
+  .pv-big { font-size: 96px; font-weight: 600; letter-spacing: var(--track-super); line-height: 1; font-variant-numeric: tabular-nums; }
+  .pv-big small { margin-left: 10px; color: var(--fg-3); font-size: var(--fs-intro); font-weight: 400; letter-spacing: var(--track-intro); }
+  .pv-bars { display: grid; gap: 14px; }
+  .pv-bar { height: 12px; border-radius: var(--r-pill); background: var(--fill); overflow: hidden; }
+  .pv-bar span { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+  .pv-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+</style>
+</head>
+<body>
+<section aria-label="Asosiy lahzalar">
+  <div class="band-head"><h2 class="band-title">Bir qarashda.</h2><a class="link-more" href="#">Hammasi</a></div>
+  <div class="gallery">
+    <ul class="gallery-track">
+      <li class="gallery-item">
+        <figure class="gallery-card">
+          <figcaption class="gallery-caption copy-highlight is-sm"><strong>Raqam so‘zdan kuchli.</strong> Har bo‘limda bitta asosiy ko‘rsatkich va uning qisqa izohi.</figcaption>
+          <p class="pv-big">128<small>hujjat</small></p>
+          <button class="media-button" type="button" aria-label="Animatsiyani qo‘yish"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" /></svg></button>
+        </figure>
+      </li>
+      <li class="gallery-item">
+        <figure class="gallery-card">
+          <figcaption class="gallery-caption copy-highlight is-sm"><strong>Jarayon ko‘rinib turadi.</strong> Har bosqich o‘z chizig‘ida, bitta urg‘u rangida.</figcaption>
+          <div class="pv-bars" aria-hidden="true">
+            <div class="pv-bar"><span style="width: 92%"></span></div>
+            <div class="pv-bar"><span style="width: 68%"></span></div>
+            <div class="pv-bar"><span style="width: 41%"></span></div>
+          </div>
+        </figure>
+      </li>
+      <li class="gallery-item">
+        <figure class="gallery-card">
+          <figcaption class="gallery-caption copy-highlight is-sm"><strong>Holat so‘z bilan aytiladi.</strong> Rang yolg‘iz kelmaydi.</figcaption>
+          <div class="pv-tags"><span class="tag">Ochiq</span><span class="tag tag-priority-2">Bugun</span><span class="tag tag-bad">2 kun kechikdi</span><span class="tag">Tayyor</span></div>
+        </figure>
+      </li>
+      <li class="gallery-item">
+        <figure class="gallery-card">
+          <figcaption class="gallery-caption copy-highlight is-sm"><strong>Bo‘sh joy — dizayn.</strong> Shubha bo‘lsa, chiziqni olib tashlang.</figcaption>
+        </figure>
+      </li>
+    </ul>
+    <div class="gallery-controls">
+      <div class="dotnav">
+        <button class="dotnav-dot" type="button" aria-label="1-karta" aria-current="true"></button>
+        <button class="dotnav-dot" type="button" aria-label="2-karta" aria-current="false"></button>
+        <button class="dotnav-dot" type="button" aria-label="3-karta" aria-current="false"></button>
+        <button class="dotnav-dot" type="button" aria-label="4-karta" aria-current="false"></button>
+      </div>
+      <div class="paddlenav">
+        <button class="paddle" type="button" aria-label="Oldingi" disabled><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+        <button class="paddle" type="button" aria-label="Keyingi"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.querySelectorAll(".gallery").forEach(function (g) {
+  var track = g.querySelector(".gallery-track");
+  var items = Array.prototype.slice.call(track.children);
+  var dots = g.querySelectorAll(".dotnav-dot");
+  var prev = g.querySelector(".paddle[aria-label='Oldingi']");
+  var next = g.querySelector(".paddle[aria-label='Keyingi']");
+  var smooth = matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  function step() { return items[1] ? items[1].offsetLeft - items[0].offsetLeft : track.clientWidth; }
+  function update() {
+    var i = Math.round(track.scrollLeft / step());
+    dots.forEach(function (d, n) { d.setAttribute("aria-current", String(n === i)); });
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+  }
+  prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: smooth }); });
+  next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: smooth }); });
+  dots.forEach(function (d, n) { d.addEventListener("click", function () { track.scrollTo({ left: n * step(), behavior: smooth }); }); });
+  track.addEventListener("scroll", function () { requestAnimationFrame(update); }, { passive: true });
+  update();
+});
+document.querySelectorAll(".media-button").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var playing = b.getAttribute("aria-label") === "Animatsiyani to‘xtatish";
+    b.setAttribute("aria-label", playing ? "Animatsiyani qo‘yish" : "Animatsiyani to‘xtatish");
+    b.innerHTML = playing
+      ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" /></svg>'
+      : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1" /><rect x="14" y="4" width="4" height="16" rx="1" /></svg>';
+  });
+});
+</script>
+</body>
+</html>

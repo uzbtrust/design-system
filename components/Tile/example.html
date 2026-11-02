@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>Tile</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 12px 0; background: var(--bg); }
+  .tile { min-height: 420px; }
+  .tile-hero { min-height: 500px; }
+  .pv-bars rect { fill: var(--data-1); }
+  .pv-num { font-size: 120px; font-weight: 600; letter-spacing: var(--track-super); line-height: 1; font-variant-numeric: tabular-nums; }
+  .pv-num small { display: block; margin-top: 8px; color: var(--fg-3); font-size: var(--fs-intro); font-weight: 400; letter-spacing: var(--track-intro); }
+  .pv-num-wrap { padding-bottom: 56px; }
+</style>
+</head>
+<body>
+<section class="tile-grid">
+  <article class="tile tile-hero" data-theme="dark">
+    <div class="tile-copy">
+      <p class="eyebrow eyebrow-new">Yangi</p>
+      <h2 class="tile-title">Yil yakunlari.</h2>
+      <p class="tile-sub">Kam so‘z, aniq raqam.</p>
+      <div class="tile-ctas">
+        <a class="btn btn-primary" href="#">Batafsil</a>
+        <a class="btn btn-secondary" href="#">Yuklab olish</a>
+      </div>
+      <p class="tile-callout">PDF · 24 sahifa</p>
+    </div>
+    <div class="tile-media">
+      <svg class="pv-bars" viewBox="0 0 552 180" width="552" height="180" aria-hidden="true">
+        <rect x="0" y="108" width="32" height="72" rx="6" />
+        <rect x="46" y="96" width="32" height="84" rx="6" />
+        <rect x="92" y="116" width="32" height="64" rx="6" />
+        <rect x="138" y="84" width="32" height="96" rx="6" />
+        <rect x="184" y="72" width="32" height="108" rx="6" />
+        <rect x="230" y="90" width="32" height="90" rx="6" />
+        <rect x="276" y="60" width="32" height="120" rx="6" />
+        <rect x="322" y="48" width="32" height="132" rx="6" />
+        <rect x="368" y="66" width="32" height="114" rx="6" />
+        <rect x="414" y="36" width="32" height="144" rx="6" />
+        <rect x="460" y="24" width="32" height="156" rx="6" />
+        <rect x="506" y="8" width="32" height="172" rx="6" />
+      </svg>
+    </div>
+  </article>
+  <article class="tile">
+    <div class="tile-copy">
+      <h3 class="tile-title">Brend qo‘llanmasi</h3>
+      <p class="tile-sub">Logo, rang va shrift — bir joyda.</p>
+      <div class="tile-ctas">
+        <a class="btn btn-primary" href="#">Batafsil</a>
+      </div>
+    </div>
+    <div class="tile-media" style="align-items: center; padding-bottom: 32px;">
+      <img src="../../assets/Logos/uzbtrust-star.png" alt="uzbtrust yulduzi" width="150" height="150">
+    </div>
+  </article>
+  <article class="tile" data-theme="dark">
+    <div class="tile-copy">
+      <h3 class="tile-title">Muddatida.</h3>
+      <p class="tile-sub">Choraklik natija.</p>
+      <div class="tile-ctas">
+        <a class="btn btn-primary" href="#">Batafsil</a>
+        <a class="btn btn-secondary" href="#">Hisobot</a>
+      </div>
+      <p class="tile-callout">Iyul — sentabr</p>
+    </div>
+    <div class="tile-media pv-num-wrap">
+      <p class="pv-num">94%<small>vazifa muddatida yopildi</small></p>
+    </div>
+  </article>
+</section>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>DatePicker</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+
+</style>
+</head>
+<body>
+<div class="datepicker" id="dp">
+  <div class="date-row">
+    <button class="date-trigger has-value" type="button" aria-expanded="true" id="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="M8 14h.01" /><path d="M12 14h.01" /><path d="M16 14h.01" /><path d="M8 18h.01" /><path d="M12 18h.01" /><path d="M16 18h.01" /></svg><span id="label"></span></button>
+    <button class="icon-button date-clear" type="button" aria-label="Sanani olib tashlash" id="clear"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button>
+    <div class="quick-dates" role="group" aria-label="Tezkor sana" id="quick"></div>
+  </div>
+  <div class="calendar" role="dialog" aria-label="Kalendar">
+    <div class="cal-head">
+      <button class="icon-button" type="button" aria-label="Oldingi oy" id="prev"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+      <strong id="month"></strong>
+      <button class="icon-button" type="button" aria-label="Keyingi oy" id="next"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+    </div>
+    <div class="cal-grid" id="grid"></div>
+  </div>
+</div>
+<script>
+var months = ["yanvar", "fevral", "mart", "aprel", "may", "iyun", "iyul", "avgust", "sentabr", "oktabr", "noyabr", "dekabr"];
+var WD = ["Du", "Se", "Ch", "Pa", "Ju", "Sh", "Ya"];
+var iso = function (d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+var now = new Date(), today = iso(now);
+var add = function (n) { var d = new Date(now); d.setDate(d.getDate() + n); return iso(d); };
+var value = add(3), view = new Date(Number(value.slice(0, 4)), Number(value.slice(5, 7)) - 1, 1);
+var long = function (v) { var p = v.split("-"); return Number(p[2]) + "-" + months[Number(p[1]) - 1] + ", " + p[0]; };
+var quick = [["Bugun", 0], ["Ertaga", 1], ["3 kun", 3], ["1 hafta", 7]];
+function render() {
+  document.getElementById("label").textContent = value ? long(value) : "Sanani tanlang";
+  document.getElementById("trigger").classList.toggle("has-value", !!value);
+  document.getElementById("clear").hidden = !value;
+  var q = document.getElementById("quick"); q.innerHTML = "";
+  quick.forEach(function (x) {
+    var b = document.createElement("button"), v = add(x[1]);
+    b.type = "button"; b.className = "chip-button" + (value === v ? " is-on" : ""); b.textContent = x[0];
+    b.setAttribute("aria-pressed", String(value === v));
+    b.onclick = function () { value = value === v ? "" : v; if (value) view = new Date(Number(value.slice(0, 4)), Number(value.slice(5, 7)) - 1, 1); render(); };
+    q.appendChild(b);
+  });
+  var m = months[view.getMonth()];
+  document.getElementById("month").textContent = m[0].toUpperCase() + m.slice(1) + " " + view.getFullYear();
+  document.getElementById("prev").disabled = view.getFullYear() === now.getFullYear() && view.getMonth() === now.getMonth();
+  var g = document.getElementById("grid"); g.innerHTML = "";
+  WD.forEach(function (d, i) { var s = document.createElement("span"); s.className = "cal-weekday" + (i > 4 ? " is-weekend" : ""); s.textContent = d; g.appendChild(s); });
+  var offset = (view.getDay() + 6) % 7, days = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+  for (var i = 0; i < offset; i++) g.appendChild(document.createElement("span"));
+  for (var d = 1; d <= days; d++) {
+    var date = iso(new Date(view.getFullYear(), view.getMonth(), d)), b = document.createElement("button");
+    b.type = "button"; b.textContent = d; b.disabled = date < today;
+    b.className = "cal-day" + (date === today ? " is-today" : "") + (date === value ? " is-selected" : "");
+    b.setAttribute("aria-label", long(date)); b.setAttribute("aria-pressed", String(date === value));
+    (function (date) { b.onclick = function () { value = date; render(); }; })(date);
+    g.appendChild(b);
+  }
+}
+document.getElementById("prev").onclick = function () { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); render(); };
+document.getElementById("next").onclick = function () { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); render(); };
+document.getElementById("clear").onclick = function () { value = ""; render(); };
+render();
+</script>
+</body>
+</html>

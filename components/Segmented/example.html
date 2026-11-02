@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>Segmented</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+
+</style>
+</head>
+<body>
+<div class="pv-stack">
+  <div class="segmented" role="group" aria-label="Bo‘limlar">
+    <button type="button" aria-pressed="true">Umumiy</button>
+    <button type="button" aria-pressed="false">Hujjatlar</button>
+    <button type="button" aria-pressed="false">Statistika</button>
+  </div>
+  <div class="segmented" role="group" aria-label="Holat">
+    <button type="button" aria-pressed="false">Ochiq <span class="seg-count">4</span></button>
+    <button type="button" aria-pressed="true">Jarayonda <span class="seg-count">2</span></button>
+    <button type="button" aria-pressed="false">Bajarildi <span class="seg-count">18</span></button>
+  </div>
+  <div style="max-width: 360px">
+    <div class="segmented segmented-block" role="group" aria-label="Kirish turi">
+      <button type="button" aria-pressed="true">Kirish</button>
+      <button type="button" aria-pressed="false">Ro‘yxatdan o‘tish</button>
+    </div>
+  </div>
+</div>
+<script>
+function segmented(root) {
+  var ind = document.createElement("span");
+  ind.className = "segmented-ind";
+  ind.setAttribute("aria-hidden", "true");
+  root.prepend(ind);
+  function measure() {
+    var active = root.querySelector("[aria-pressed='true']");
+    if (!active || !active.offsetWidth) return root.classList.remove("is-measured");
+    ind.style.transform = "translateX(" + active.offsetLeft + "px)";
+    ind.style.width = active.offsetWidth + "px";
+    root.classList.add("is-measured");
+  }
+  root.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b || !root.contains(b)) return;
+    root.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    measure();
+  });
+  measure();
+  new ResizeObserver(measure).observe(root);
+  requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add("is-animated"); }); });
+}
+document.querySelectorAll(".segmented").forEach(segmented);
+</script>
+</body>
+</html>

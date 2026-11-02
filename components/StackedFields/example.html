@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>StackedFields</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+  .login-card { margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="login-card">
+  <div class="segmented segmented-block" role="group" aria-label="Kirish turi">
+    <button type="button" aria-pressed="true">Kirish</button>
+    <button type="button" aria-pressed="false">Ro‘yxatdan o‘tish</button>
+  </div>
+  <form class="login-form" onsubmit="return false">
+    <div class="stacked-fields">
+      <label><span class="sr-only">Login</span><input placeholder="Login" autocomplete="username" /></label>
+      <label class="password-row"><span class="sr-only">Parol</span><input type="password" placeholder="Parol" autocomplete="current-password" /><button class="icon-button" type="button" aria-label="Parolni ko‘rsatish"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx="12" cy="12" r="3" /></svg></button></label>
+    </div>
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Kirish</button>
+    <p class="login-help">Hisobingiz yo‘qmi? <button class="link-inline" type="button">Ro‘yxatdan o‘ting</button></p>
+  </form>
+</div>
+<script>
+function segmented(root) {
+  var ind = document.createElement("span");
+  ind.className = "segmented-ind";
+  ind.setAttribute("aria-hidden", "true");
+  root.prepend(ind);
+  function measure() {
+    var active = root.querySelector("[aria-pressed='true']");
+    if (!active || !active.offsetWidth) return root.classList.remove("is-measured");
+    ind.style.transform = "translateX(" + active.offsetLeft + "px)";
+    ind.style.width = active.offsetWidth + "px";
+    root.classList.add("is-measured");
+  }
+  root.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b || !root.contains(b)) return;
+    root.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    measure();
+  });
+  measure();
+  new ResizeObserver(measure).observe(root);
+  requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add("is-animated"); }); });
+}
+document.querySelectorAll(".segmented").forEach(segmented);
+</script>
+</body>
+</html>

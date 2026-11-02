@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>Field</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+
+</style>
+</head>
+<body>
+<form class="pv-stack form" style="max-width: 480px" onsubmit="return false">
+  <label class="field"><span class="field-label">Hujjat nomi</span><input class="input input-lg" placeholder="Masalan: choraklik hisobot" /></label>
+  <label class="field"><span class="field-label">Tavsif <span class="optional">ixtiyoriy</span></span><textarea class="input" placeholder="Qisqacha nima haqida"></textarea></label>
+  <label class="field"><span class="field-label">Turi</span>
+    <span class="select-wrap"><select class="input"><option>Hisobot</option><option>Taqdimot</option><option>Maqola</option></select><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></span>
+  </label>
+  <label class="field"><span class="field-label">Login</span><input class="input" value="yangi.login" /><span class="field-hint">Kichik lotin harflari, nuqta va raqam.</span></label>
+  <p class="field-hint tone-warn">Bu nom band. Boshqasini tanlang.</p>
+</form>
+</body>
+</html>

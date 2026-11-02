@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>PillField</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+  .toolbar { margin-bottom: 0; }
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <div class="toolbar-filters">
+    <label class="pill-field search-pill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg><input type="search" placeholder="Qidirish" value="hisobot" aria-label="Qidirish" /><button class="pill-clear" type="button" aria-label="Tozalash"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button></label>
+    <label class="pill-field select-pill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5" /><path d="M20 21a8 8 0 0 0-16 0" /></svg><select aria-label="Mas’ul"><option>Hamma</option><option>Faqat men</option></select><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></label>
+  </div>
+  <div class="segmented" role="group" aria-label="Ko‘rinish">
+    <button type="button" aria-pressed="true">Ro‘yxat</button>
+    <button type="button" aria-pressed="false">Kartalar</button>
+  </div>
+</div>
+<script>
+function segmented(root) {
+  var ind = document.createElement("span");
+  ind.className = "segmented-ind";
+  ind.setAttribute("aria-hidden", "true");
+  root.prepend(ind);
+  function measure() {
+    var active = root.querySelector("[aria-pressed='true']");
+    if (!active || !active.offsetWidth) return root.classList.remove("is-measured");
+    ind.style.transform = "translateX(" + active.offsetLeft + "px)";
+    ind.style.width = active.offsetWidth + "px";
+    root.classList.add("is-measured");
+  }
+  root.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b || !root.contains(b)) return;
+    root.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    measure();
+  });
+  measure();
+  new ResizeObserver(measure).observe(root);
+  requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add("is-animated"); }); });
+}
+document.querySelectorAll(".segmented").forEach(segmented);
+</script>
+</body>
+</html>

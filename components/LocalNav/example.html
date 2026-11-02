@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>LocalNav</title>
+<style>
+  body { min-height: 0; margin: 0; background: var(--bg); }
+  .pv-stack { display: flex; flex-direction: column; gap: 24px; padding: 24px 0; }
+  .pv-stack .localnav { position: relative; }
+  .pv-stack > .localnav { z-index: calc(var(--z-bar) + 1); }
+</style>
+</head>
+<body>
+<div class="pv-stack">
+  <nav class="localnav" aria-label="Hisobot bo‘limlari">
+    <div class="localnav-inner">
+      <a class="localnav-title" href="#">Hisobot 2026</a>
+      <ul class="localnav-links">
+        <li><a class="localnav-link" aria-current="page">Umumiy</a></li>
+        <li><a class="localnav-link" href="#">Raqamlar</a></li>
+        <li><a class="localnav-link" href="#">Hujjatlar</a></li>
+        <li><a class="localnav-link" href="#">Savollar</a></li>
+      </ul>
+      <button class="localnav-toggle" type="button" aria-label="Bo‘limlar" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+      <a class="btn btn-primary btn-xs" href="#">Yuklab olish</a>
+    </div>
+  </nav>
+  <div data-theme="dark">
+    <nav class="localnav" aria-label="Shriftlar bo‘limlari">
+      <div class="localnav-inner">
+        <a class="localnav-title" href="#">Shriftlar</a>
+        <ul class="localnav-links">
+          <li><a class="localnav-link" aria-current="page">Umumiy</a></li>
+          <li><a class="localnav-link" href="#">Tizim shriftlari</a></li>
+        </ul>
+        <button class="localnav-toggle" type="button" aria-label="Bo‘limlar" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+      </div>
+    </nav>
+  </div>
+</div>
+<script>
+document.querySelectorAll(".localnav").forEach(function (nav) {
+  var t = nav.querySelector(".localnav-toggle");
+  t.addEventListener("click", function () {
+    var open = nav.classList.toggle("is-open");
+    t.setAttribute("aria-expanded", String(open));
+  });
+});
+</script>
+</body>
+</html>

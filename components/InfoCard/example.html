@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>InfoCard</title>
+<style>
+  body { min-height: 0; margin: 0; background: var(--bg); }
+  .pv-band { padding: 48px 22px; }
+  .pv-head { max-width: var(--max-narrow); margin: 0 auto 8px; font-size: 40px; font-weight: 600; line-height: 1.1; }
+  .pv-lead { max-width: var(--max-narrow); margin: 0 auto 28px; color: var(--fg-3); font-size: var(--fs-intro); letter-spacing: var(--track-intro); line-height: 1.381; }
+</style>
+</head>
+<body>
+<section class="pv-band">
+  <h2 class="pv-head">Shablonlar</h2>
+  <p class="pv-lead">Har bir muhit uchun tayyor qolip.</p>
+  <div class="info-grid">
+    <article class="info-card">
+      <h3 class="info-title">Hisobot</h3>
+      <p class="info-text">Yillik va choraklik hisobot qolipi: muqova, xulosa, raqamlar qatori va grafiklar. Chop va PDF uchun tayyor.</p>
+      <a class="btn btn-primary btn-xs" href="#">Yuklab olish</a>
+    </article>
+    <article class="info-card">
+      <h3 class="info-title">Taqdimot</h3>
+      <p class="info-text">16:9 slaydlar: bitta fikr — bitta slayd, ulkan raqam va kulrang davomi.</p>
+      <a class="btn btn-primary btn-xs" href="#">Yuklab olish</a>
+    </article>
+    <article class="info-card">
+      <h3 class="info-title">Ijtimoiy tarmoq</h3>
+      <p class="info-text">Post va hikoya o‘lchamlari, oq va qora fonda, bitta urg‘u rangi bilan.</p>
+      <a class="btn btn-primary btn-xs" href="#">Yuklab olish</a>
+    </article>
+    <article class="info-card">
+      <h3 class="info-title">Hujjat</h3>
+      <p class="info-text">Xat, buyruq va eslatma uchun bir ustunli qolip.</p>
+      <a class="link-more" href="#">Batafsil</a>
+    </article>
+  </div>
+</section>
+</body>
+</html>

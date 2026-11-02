@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>GlobalNav</title>
+<style>
+  body { min-height: 0; margin: 0; background: var(--bg); }
+  .pv-stack { display: flex; flex-direction: column; gap: 24px; padding: 24px 0; }
+  .pv-island { padding: 0; }
+</style>
+</head>
+<body>
+<div class="pv-stack">
+  <nav class="globalnav" aria-label="Asosiy">
+    <div class="globalnav-inner">
+      <a class="globalnav-brand" href="#"><img src="../../assets/Logos/uzbtrust-star.png" alt="uzbtrust" width="18" height="18"></a>
+      <ul class="globalnav-list">
+        <li><a class="globalnav-link" href="#" aria-current="page">Bosh sahifa</a></li>
+        <li><a class="globalnav-link" href="#">Loyihalar</a></li>
+        <li><a class="globalnav-link" href="#">Hisobotlar</a></li>
+        <li><a class="globalnav-link" href="#">Hujjatlar</a></li>
+        <li><a class="globalnav-link" href="#">Shablonlar</a></li>
+        <li><a class="globalnav-link" href="#">Resurslar</a></li>
+        <li><a class="globalnav-link" href="#">Aloqa</a></li>
+      </ul>
+      <div class="globalnav-actions">
+        <button class="globalnav-icon" type="button" aria-label="Qidirish"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg></button>
+      </div>
+    </div>
+  </nav>
+  <div class="pv-island" data-theme="dark">
+    <nav class="globalnav" aria-label="Asosiy (qorong‘u)">
+      <div class="globalnav-inner">
+        <a class="globalnav-brand" href="#"><img src="../../assets/Logos/uzbtrust-star.png" alt="uzbtrust" width="18" height="18"></a>
+        <ul class="globalnav-list">
+          <li><a class="globalnav-link" href="#">Bosh sahifa</a></li>
+          <li><a class="globalnav-link" href="#" aria-current="page">Loyihalar</a></li>
+          <li><a class="globalnav-link" href="#">Hisobotlar</a></li>
+          <li><a class="globalnav-link" href="#">Hujjatlar</a></li>
+          <li><a class="globalnav-link" href="#">Shablonlar</a></li>
+          <li><a class="globalnav-link" href="#">Resurslar</a></li>
+          <li><a class="globalnav-link" href="#">Aloqa</a></li>
+        </ul>
+        <div class="globalnav-actions">
+          <button class="globalnav-icon" type="button" aria-label="Qidirish"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /><circle cx="11" cy="11" r="8" /></svg></button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+</body>
+</html>

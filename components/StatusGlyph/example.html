@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>StatusGlyph</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+  .pv-glyphs { display: flex; flex-wrap: wrap; gap: 28px; }
+  .pv-glyphs figure { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 0; }
+  .pv-glyphs figcaption { color: var(--fg-3); font-size: 13px; }
+  .pv-cycle { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; }
+</style>
+</head>
+<body>
+<div class="pv-glyphs">
+  <figure><span class="row-glyph"><svg class="glyph glyph-todo" viewBox="0 0 24 24" aria-hidden="true"><circle class="glyph-ring" cx="12" cy="12" r="10" /><path class="glyph-half" d="M12 5.5a6.5 6.5 0 0 0 0 13Z" /><circle class="glyph-dot" cx="12" cy="12" r="4" /><circle class="glyph-fill" cx="12" cy="12" r="10" /><path class="glyph-mark" d="m7.6 12.3 3 3 5.8-6.3" /><path class="glyph-cross" d="m8.5 8.5 7 7m0-7-7 7" /></svg></span><figcaption>Ochiq</figcaption></figure>
+  <figure><span class="row-glyph"><svg class="glyph glyph-in_progress" viewBox="0 0 24 24" aria-hidden="true"><circle class="glyph-ring" cx="12" cy="12" r="10" /><path class="glyph-half" d="M12 5.5a6.5 6.5 0 0 0 0 13Z" /><circle class="glyph-dot" cx="12" cy="12" r="4" /><circle class="glyph-fill" cx="12" cy="12" r="10" /><path class="glyph-mark" d="m7.6 12.3 3 3 5.8-6.3" /><path class="glyph-cross" d="m8.5 8.5 7 7m0-7-7 7" /></svg></span><figcaption>Jarayonda</figcaption></figure>
+  <figure><span class="row-glyph"><svg class="glyph glyph-in_review" viewBox="0 0 24 24" aria-hidden="true"><circle class="glyph-ring" cx="12" cy="12" r="10" /><path class="glyph-half" d="M12 5.5a6.5 6.5 0 0 0 0 13Z" /><circle class="glyph-dot" cx="12" cy="12" r="4" /><circle class="glyph-fill" cx="12" cy="12" r="10" /><path class="glyph-mark" d="m7.6 12.3 3 3 5.8-6.3" /><path class="glyph-cross" d="m8.5 8.5 7 7m0-7-7 7" /></svg></span><figcaption>Tekshiruvda</figcaption></figure>
+  <figure><span class="row-glyph"><svg class="glyph glyph-done" viewBox="0 0 24 24" aria-hidden="true"><circle class="glyph-ring" cx="12" cy="12" r="10" /><path class="glyph-half" d="M12 5.5a6.5 6.5 0 0 0 0 13Z" /><circle class="glyph-dot" cx="12" cy="12" r="4" /><circle class="glyph-fill" cx="12" cy="12" r="10" /><path class="glyph-mark" d="m7.6 12.3 3 3 5.8-6.3" /><path class="glyph-cross" d="m8.5 8.5 7 7m0-7-7 7" /></svg></span><figcaption>Bajarildi</figcaption></figure>
+  <figure><span class="row-glyph"><svg class="glyph glyph-cancelled" viewBox="0 0 24 24" aria-hidden="true"><circle class="glyph-ring" cx="12" cy="12" r="10" /><path class="glyph-half" d="M12 5.5a6.5 6.5 0 0 0 0 13Z" /><circle class="glyph-dot" cx="12" cy="12" r="4" /><circle class="glyph-fill" cx="12" cy="12" r="10" /><path class="glyph-mark" d="m7.6 12.3 3 3 5.8-6.3" /><path class="glyph-cross" d="m8.5 8.5 7 7m0-7-7 7" /></svg></span><figcaption>Bekor qilingan</figcaption></figure>
+  <figure><button class="pv-cycle icon-button" type="button" aria-label="Holatni almashtirish" id="cycle"><svg class="glyph glyph-todo" viewBox="0 0 24 24" aria-hidden="true"><circle class="glyph-ring" cx="12" cy="12" r="10" /><path class="glyph-half" d="M12 5.5a6.5 6.5 0 0 0 0 13Z" /><circle class="glyph-dot" cx="12" cy="12" r="4" /><circle class="glyph-fill" cx="12" cy="12" r="10" /><path class="glyph-mark" d="m7.6 12.3 3 3 5.8-6.3" /><path class="glyph-cross" d="m8.5 8.5 7 7m0-7-7 7" /></svg></button><figcaption>Bosib ko‘ring</figcaption></figure>
+</div>
+<script>
+var order = ["todo", "in_progress", "in_review", "done", "cancelled"], i = 0;
+document.getElementById("cycle").addEventListener("click", function () {
+  i = (i + 1) % order.length;
+  this.querySelector("svg").setAttribute("class", "glyph glyph-" + order[i]);
+});
+</script>
+</body>
+</html>

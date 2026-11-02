@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>Topbar</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+  body { padding: 0; }
+  .pv-page { height: 330px; background: var(--bg); }
+  .pv-page .menu { animation: none; }
+</style>
+</head>
+<body>
+<div class="pv-page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="wordmark" href="#" aria-label="Bosh sahifa"><svg class="wordmark-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect width="24" height="24" rx="6.5" /><path d="m7.2 12.4 3.1 3.1 6.5-7" /></svg><span class="wordmark-text">Loyiha</span></a>
+      <nav class="topnav" aria-label="Bo‘limlar">
+        <div class="segmented" role="group" aria-label="Bo‘limlar">
+          <button type="button" aria-pressed="true">Umumiy</button>
+          <button type="button" aria-pressed="false">Hujjatlar</button>
+        </div>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Mavzuni almashtirish"><svg class="theme-icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" /></svg><svg class="theme-icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg></button>
+        <div class="menu-wrap">
+          <button class="account-button" type="button" aria-label="Hisob menyusi" aria-expanded="true"><span class="avatar">U</span></button>
+          <div class="menu" role="menu">
+            <div class="menu-head"><span class="avatar">U</span><span><strong>Foydalanuvchi</strong><small>login</small></span></div>
+            <button class="menu-item" type="button" role="menuitem"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" /><circle cx="16.5" cy="7.5" r=".5" fill="currentColor" /></svg> Parolni o‘zgartirish</button>
+            <button class="menu-item" type="button" role="menuitem"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" /></svg> Qorong‘u mavzu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+<script>
+function segmented(root) {
+  var ind = document.createElement("span");
+  ind.className = "segmented-ind";
+  ind.setAttribute("aria-hidden", "true");
+  root.prepend(ind);
+  function measure() {
+    var active = root.querySelector("[aria-pressed='true']");
+    if (!active || !active.offsetWidth) return root.classList.remove("is-measured");
+    ind.style.transform = "translateX(" + active.offsetLeft + "px)";
+    ind.style.width = active.offsetWidth + "px";
+    root.classList.add("is-measured");
+  }
+  root.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b || !root.contains(b)) return;
+    root.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    measure();
+  });
+  measure();
+  new ResizeObserver(measure).observe(root);
+  requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add("is-animated"); }); });
+}
+document.querySelectorAll(".segmented").forEach(segmented);
+</script>
+</body>
+</html>

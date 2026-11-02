@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>Accordion</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 40px 22px; background: var(--bg); }
+  .pv-title { max-width: var(--max-narrow); margin: 0 auto 28px; font-size: 48px; font-weight: 600; letter-spacing: var(--track-display); line-height: 1.0834; }
+</style>
+</head>
+<body>
+<h2 class="pv-title">Savollar.</h2>
+<div class="accordion">
+  <details class="accordion-item" name="faq" open>
+    <summary class="accordion-head"><span>Tizimni qanday ulayman?</span><svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14" /><path class="v" d="M12 5v14" /></svg></summary>
+    <div class="accordion-body"><p>Sahifaga <code>tokens.css</code> va <code>components/bundle.css</code> ni ulang, keyin komponent README'sidagi tuzilmani takrorlang. Rang va o‘lchamni faqat <code>var(--…)</code> orqali oling.</p></div>
+  </details>
+  <details class="accordion-item" name="faq">
+    <summary class="accordion-head"><span>Shriftni alohida yuklash kerakmi?</span><svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14" /><path class="v" d="M12 5v14" /></svg></summary>
+    <div class="accordion-body"><p>Yo‘q. Apple qurilmalarida tizim shrifti — San Francisco — o‘zi ishlaydi; boshqa qurilmalarda Helvetica Neue yoki Arial.</p></div>
+  </details>
+  <details class="accordion-item" name="faq">
+    <summary class="accordion-head"><span>Bitta blokni qorong‘u qilsa bo‘ladimi?</span><svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14" /><path class="v" d="M12 5v14" /></svg></summary>
+    <div class="accordion-body"><p>Ha. O‘sha blokka <code>data-theme="dark"</code> qo‘ying — ichidagi barcha tokenlar qorong‘u mavzuga o‘tadi.</p></div>
+  </details>
+</div>
+</body>
+</html>

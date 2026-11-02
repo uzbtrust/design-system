@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>Facts</title>
+<style>
+  body { min-height: 0; margin: 0; padding: 24px; background: var(--bg); }
+  .pv-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .pv-stack { display: flex; flex-direction: column; gap: 20px; }
+  .pv-cap { margin-bottom: 10px; }
+  .facts { margin-top: 0; }
+  .stat-list { margin-top: 48px; }
+</style>
+</head>
+<body>
+<div class="facts" role="group" aria-label="Saralash">
+  <button class="fact is-active" type="button" aria-pressed="true"><span class="fact-num" >24</span><span class="fact-label">Jami</span></button>
+  <button class="fact" type="button" aria-pressed="false"><span class="fact-num" >5</span><span class="fact-label">Jarayonda</span></button>
+  <button class="fact is-bad" type="button" aria-pressed="false"><span class="fact-num" >1</span><span class="fact-label">Kechikkan</span></button>
+  <button class="fact" type="button" aria-pressed="false"><span class="fact-num" >18</span><span class="fact-label">Tayyor</span></button>
+  <button class="fact" type="button" disabled><span class="fact-num">0</span><span class="fact-label">Bekor qilingan</span></button>
+</div>
+<ul class="stat-list">
+  <li class="stat"><span class="stat-num" >12</span><span class="stat-label">loyiha</span></li>
+  <li class="stat"><span class="stat-num" >186</span><span class="stat-label">sahifa</span></li>
+  <li class="stat"><span class="stat-num" >412</span><span class="stat-label">kun</span></li>
+</ul>
+<script>
+document.querySelectorAll(".fact:not(:disabled)").forEach(function (b, _, all) {
+  b.addEventListener("click", function () { all.forEach(function (x) { x.classList.toggle("is-active", x === b); x.setAttribute("aria-pressed", String(x === b)); }); });
+});
+</script>
+</body>
+</html>
