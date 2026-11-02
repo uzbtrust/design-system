@@ -20,7 +20,7 @@ Bu bo‘lim — tizimni qo‘llaydigan har kim (inson yoki agent) uchun qisqa bu
 - Mavzu `<html>` da almashadi: `data-theme="dark"` yoki `class="dark"`. Uni sahifa chizilishidan oldin `<head>` dagi kichik skript bilan o‘rnating. Odatda tizim mavzusiga ergashing; foydalanuvchi o‘zi bosgandagina tanlovni saqlang.
 - Komponentlar — CSS klasslari va qat’iy HTML tuzilmasi. React, Vue yoki oddiy HTML — farqi yo‘q: komponent README'sidagi tuzilmani o‘sha freymvorkda takrorlang.
 - Ilova qolipi: shisha `Topbar` → `PageHead` (yoki bosh sahifada `Hero`) → `Facts` → asosiy kontent (`InsetList`, `Card` to‘ri, `StatsTable`) → oddiy `.foot`.
-- Sayt qolipi: `Ribbon` → `GlobalNav` → yopishqoq `LocalNav` → `Tile` to‘ri yoki `Hero` → `bg` / `bg-alt` band'lar (`band-head`, `InfoCard`, `Gallery`, `Accordion`) → `Footer`. Batafsil — «Sayt» bo‘limi.
+- Sayt qolipi: `Ribbon` → `GlobalNav` → yopishqoq `LocalNav` → `ChapterNav` (ixtiyoriy) → `Tile` to‘ri, `Hero` yoki `VideoHero` → `bg` / `bg-alt` band'lar (`band-head`, `InfoCard`, `Gallery`, `Specs`, `Accordion`; «Batafsil» — `Modal`) → `Footer`. Batafsil — «Sayt» bo‘limi.
 - Mavzu oroli: istalgan blokka `data-theme="dark"` (yoki `"light"`) qo‘ying — tokenlar shu blok ichida almashadi. Qorong‘u tile, qorong‘u band yoki qorong‘u hero shunday yasaladi.
 
 ### Hujjat va PDF

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../dist/uzbtrust.css">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<title>VideoHero</title>
+<style>
+  body { min-height: 0; margin: 0; background: var(--bg); }
+  .video-hero-media { height: 420px; display: grid; place-items: end center; }
+  .pv-bars { display: block; width: min(640px, 80%); height: auto; margin-bottom: 0; }
+  .pv-bars rect { fill: var(--data-1); }
+</style>
+</head>
+<body>
+<section class="video-hero">
+  <div class="video-hero-copy">
+    <p class="eyebrow eyebrow-new">Yangi</p>
+    <h1 class="video-hero-title">Yil yakunlari.</h1>
+    <p class="video-hero-lead">Bir yilda nima qilindi — uch daqiqada.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#">Batafsil</a>
+      <a class="link-play" href="#">Filmni ko‘rish <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z" /><circle cx="12" cy="12" r="10" /></svg></a>
+    </div>
+  </div>
+  <div class="video-hero-media" data-theme="dark" role="img" aria-label="Oylar bo‘yicha natijalar grafigi (video o‘rnida)">
+    <svg class="pv-bars" viewBox="0 0 552 180" aria-hidden="true">
+      <rect x="0" y="108" width="32" height="72" rx="6" /><rect x="46" y="96" width="32" height="84" rx="6" /><rect x="92" y="116" width="32" height="64" rx="6" /><rect x="138" y="84" width="32" height="96" rx="6" /><rect x="184" y="72" width="32" height="108" rx="6" /><rect x="230" y="90" width="32" height="90" rx="6" /><rect x="276" y="60" width="32" height="120" rx="6" /><rect x="322" y="48" width="32" height="132" rx="6" /><rect x="368" y="66" width="32" height="114" rx="6" /><rect x="414" y="36" width="32" height="144" rx="6" /><rect x="460" y="24" width="32" height="156" rx="6" /><rect x="506" y="8" width="32" height="172" rx="6" />
+    </svg>
+    <button class="media-button" type="button" aria-label="Videoni to‘xtatish"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1" /><rect x="14" y="4" width="4" height="16" rx="1" /></svg></button>
+  </div>
+</section>
+<script>
+document.querySelectorAll(".video-hero-media .media-button").forEach(function (b) {
+  var video = b.parentElement.querySelector("video");
+  b.addEventListener("click", function () {
+    var playing = b.getAttribute("aria-label") === "Videoni to‘xtatish";
+    if (video) { playing ? video.pause() : video.play(); }
+    b.setAttribute("aria-label", playing ? "Videoni qo‘yish" : "Videoni to‘xtatish");
+    b.innerHTML = playing
+      ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" /></svg>'
+      : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1" /><rect x="14" y="4" width="4" height="16" rx="1" /></svg>';
+  });
+});
+</script>
+</body>
+</html>

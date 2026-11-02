@@ -57,7 +57,7 @@ Logo, ikon va belgilarni shu repodan oling. Qayta chizmang, taxminiy nusxa yasam
 
 ## Muhitga qarab
 
-- **Sayt:** `Ribbon` → `GlobalNav` → `LocalNav` → `Tile` to‘ri yoki `Hero` → `bg` / `bg-alt` band'lar → `Footer`. To‘liq namuna: `examples/site.html`.
+- **Sayt:** `Ribbon` → `GlobalNav` → `LocalNav` → (`ChapterNav`) → `Tile` to‘ri, `Hero` yoki `VideoHero` → `bg` / `bg-alt` band'lar (`InfoCard`, `Gallery`, `Specs`, `Accordion`, «Batafsil» uchun `Modal`) → `Footer`. To‘liq namuna: `examples/site.html`.
 - **Ilova:** `Topbar` → `PageHead` → `Facts` → `InsetList` / `Card` / `StatsTable`.
 - **PDF va hujjat:** `data-theme="print"`, `DocumentPage` komponenti, `docs/brand.md` → «Hujjat va PDF».
 - **Slayd, rasm, ijtimoiy tarmoq:** `docs/brand.md` → «Taqdimot va slayd», «Rasm, ijtimoiy tarmoq, grafik».

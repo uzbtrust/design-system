@@ -4616,6 +4616,374 @@ kbd {
   }
 }
 
+/* ---- 97 · Ma’lumot va media naqshlari ------------------------------------------- */
+
+/* ---- Specs: texnik xususiyatlar va solishtirish ------------------------------- */
+.specs {
+  --specs-cols: 1;
+  max-width: var(--max-narrow);
+  margin-inline: auto;
+}
+.specs-head,
+.specs-row {
+  display: grid;
+  grid-template-columns: 216px repeat(var(--specs-cols), minmax(0, 1fr));
+  column-gap: 30px;
+}
+.specs-head {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 1;
+  padding: 16px 0;
+  background: var(--bg);
+  box-shadow: 0 1px 0 var(--line);
+}
+.specs-col-title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: var(--track-title);
+  line-height: 1.1667;
+}
+.specs-col-title small {
+  display: block;
+  margin-top: 4px;
+  color: var(--fg-3);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  letter-spacing: var(--track-small);
+}
+.specs-row {
+  padding: 38px 0 51px;
+  border-top: 1px solid var(--line);
+}
+.specs-head + .specs-row {
+  border-top: 0;
+}
+.specs-label {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: var(--track-title);
+  line-height: 1.1667;
+}
+.specs-cell {
+  min-width: 0;
+  font-size: var(--fs-body);
+  letter-spacing: var(--track-body);
+  line-height: 1.4706;
+}
+.specs-sub {
+  margin: 20px 0 7px;
+  font-weight: 600;
+}
+.specs-sub:first-child {
+  margin-top: 0;
+}
+.specs-value {
+  font-size: 28px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: var(--track-eyebrow);
+  line-height: 1.1428;
+}
+.specs-value + .specs-note {
+  margin-top: 4px;
+}
+.specs-note {
+  color: var(--fg-3);
+  font-size: var(--fs-sm);
+  letter-spacing: var(--track-small);
+  line-height: 1.4286;
+}
+.specs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.specs-none {
+  color: var(--fg-3);
+}
+@media (max-width: 734px) {
+  .specs-head,
+  .specs-row {
+    grid-template-columns: repeat(var(--specs-cols), minmax(0, 1fr));
+    column-gap: 16px;
+  }
+  .specs-head > :first-child {
+    display: none;
+  }
+  .specs-head {
+    top: 48px;
+  }
+  .specs-col-title {
+    font-size: 19px;
+    letter-spacing: var(--track-intro);
+  }
+  .specs-row {
+    padding: 24px 0 32px;
+  }
+  .specs-label {
+    grid-column: 1 / -1;
+    margin-bottom: 14px;
+    font-size: 21px;
+    letter-spacing: var(--track-intro);
+  }
+}
+
+/* ---- ChapterNav: ikonli bo‘limlar qatori ------------------------------------- */
+.chapternav {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.chapternav::-webkit-scrollbar {
+  display: none;
+}
+.chapternav-items {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  margin: 0 auto;
+  padding: 4px var(--gutter) var(--s-6);
+  list-style: none;
+}
+.chapternav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+  color: var(--fg-2);
+  text-align: center;
+  transition: color var(--t-fast) var(--ease);
+}
+.chapternav-icon {
+  display: grid;
+  place-items: center;
+  height: 64px;
+  margin-bottom: 10px;
+  transition: color var(--t-fast) var(--ease);
+}
+.chapternav-icon svg {
+  width: 36px;
+  height: 36px;
+}
+.chapternav-icon img {
+  width: auto;
+  max-height: 64px;
+}
+.chapternav-new {
+  color: var(--new);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--track-caption);
+  line-height: 1.2;
+}
+.chapternav-label {
+  margin-top: 4px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: var(--track-small);
+  line-height: 1.2857;
+  white-space: nowrap;
+}
+.chapternav-link[aria-current] {
+  color: var(--fg);
+}
+.chapternav-link[aria-current] .chapternav-icon {
+  color: var(--accent-ink);
+}
+@media (hover: hover) {
+  .chapternav-link:hover {
+    color: var(--fg);
+  }
+}
+
+/* ---- Modal: butun ekranli oyna --------------------------------------------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--fg);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.modal::backdrop {
+  background: var(--backdrop);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.modal-frame {
+  position: relative;
+  max-width: var(--max-wide);
+  margin: var(--s-7) auto;
+  border-radius: var(--r-xl);
+  background: var(--bg-elev);
+  box-shadow: var(--shadow-lg);
+}
+.modal[open] .modal-frame {
+  animation: modal-in 0.5s var(--ease-out) both;
+}
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.965);
+  }
+}
+.modal-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  height: 0;
+}
+.modal-close {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin: 16px 16px 0 0;
+  border-radius: 50%;
+  background: var(--control-bg);
+  color: var(--fg);
+  transition:
+    background-color var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease);
+}
+.modal-close::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+}
+.modal-close:active {
+  transform: scale(0.9);
+}
+@media (hover: hover) {
+  .modal-close:hover {
+    background: color-mix(in srgb, var(--control-bg) 86%, var(--fg));
+  }
+}
+.modal-content {
+  padding: var(--s-9) clamp(24px, 8vw, 120px);
+}
+.modal-title {
+  max-width: 14em;
+  font-size: var(--fs-h1);
+  font-weight: 600;
+  letter-spacing: var(--track-hero);
+  line-height: 1.0625;
+}
+.modal-content > .copy-highlight {
+  max-width: 36em;
+  margin-top: var(--s-5);
+}
+@media (max-width: 734px) {
+  .modal-frame {
+    min-height: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .modal-content {
+    padding: 72px 22px 48px;
+  }
+}
+
+/* ---- VideoHero: video bilan kirish bloki ------------------------------------ */
+.video-hero {
+  padding-top: clamp(48px, 8vw, 96px);
+  text-align: center;
+}
+.video-hero-copy {
+  max-width: calc(var(--max-narrow) + 44px);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.video-hero-copy .eyebrow {
+  margin-bottom: 8px;
+  font-size: var(--fs-intro);
+  font-weight: 400;
+  letter-spacing: var(--track-intro);
+}
+.video-hero-title {
+  font-size: var(--fs-hero);
+  font-weight: 600;
+  letter-spacing: var(--track-super);
+  line-height: 1.04;
+}
+.video-hero-lead {
+  max-width: 34em;
+  margin: 16px auto 0;
+  color: var(--fg-3);
+  font-size: var(--fs-intro);
+  letter-spacing: var(--track-intro);
+  line-height: 1.381;
+}
+.link-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--accent-ink);
+  font-size: var(--fs-body);
+  letter-spacing: var(--track-body);
+  transition: opacity var(--t-fast) var(--ease);
+}
+.link-play svg {
+  width: 22px;
+  height: 22px;
+}
+@media (hover: hover) {
+  .link-play:hover {
+    opacity: 0.75;
+  }
+}
+.video-hero-media {
+  position: relative;
+  height: min(56.25vw, 80vh);
+  margin-top: var(--s-8);
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+.video-hero-media > video,
+.video-hero-media > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-hero-media .media-button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+@media (max-width: 734px) {
+  .video-hero-media {
+    height: min(125vw, 80vh);
+    margin-top: var(--s-6);
+  }
+}
+
+@media print {
+  .chapternav,
+  .modal-close,
+  .video-hero-media .media-button {
+    display: none !important;
+  }
+  .specs-head {
+    position: static;
+  }
+  .specs-row {
+    break-inside: avoid;
+  }
+}
+
 /* ---- 95 · Chop va PDF ------------------------------------------------------- */
 /* Ranglar tokens.css'dagi `print` mavzusidan keladi. PDF ekranda yasalsa — <html data-theme="print">;
    brauzerda chop etilsa — chop oldidan data-theme="print" qo‘ying (beforeprint). */

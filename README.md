@@ -6,7 +6,7 @@ Har qanday ish uchun yagona vizual til: sayt, veb-ilova, PDF hujjat, taqdimot, r
 
 Namunalarni brauzerda ko‘rish: [uzbtrust.github.io/design-system](https://uzbtrust.github.io/design-system/)
 
-Sahifaga bitta fayl ulanadi — tokenlar va 38 ta komponent:
+Sahifaga bitta fayl ulanadi — tokenlar va 42 ta komponent:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/dist/uzbtrust.css">
@@ -49,7 +49,7 @@ Agent `AGENTS.md` ni o‘qiydi: qaysi faylni qachon ochish, CSS'ni qanday ulash,
 
 ## Komponentlar
 
-- **Sayt:** [GlobalNav](components/GlobalNav) · [LocalNav](components/LocalNav) · [Ribbon](components/Ribbon) · [Tile](components/Tile) · [InfoCard](components/InfoCard) · [Gallery](components/Gallery) · [Accordion](components/Accordion) · [Footer](components/Footer)
+- **Sayt:** [GlobalNav](components/GlobalNav) · [LocalNav](components/LocalNav) · [Ribbon](components/Ribbon) · [Tile](components/Tile) · [InfoCard](components/InfoCard) · [Gallery](components/Gallery) · [Accordion](components/Accordion) · [Footer](components/Footer) · [ChapterNav](components/ChapterNav) · [VideoHero](components/VideoHero) · [Specs](components/Specs) · [Modal](components/Modal)
 - **Sahifa va qobiq:** [Topbar](components/Topbar) · [PageHead](components/PageHead) · [Hero](components/Hero) · [Facts](components/Facts) · [DocumentPage](components/DocumentPage) · [Logo](components/Logo)
 - **Amallar:** [Button](components/Button) · [IconButton](components/IconButton) · [ChipButton](components/ChipButton) · [Segmented](components/Segmented) · [Stepper](components/Stepper)
 - **Formalar:** [Field](components/Field) · [PillField](components/PillField) · [StackedFields](components/StackedFields) · [DatePicker](components/DatePicker) · [DropZone](components/DropZone)
