@@ -1,5 +1,21 @@
 /* uzbtrust — generated from tokens.json */
 
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/InterVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/InterVariable-Italic.woff2") format("woff2");
+}
+
 :root,
 [data-theme="light"] {
   --bg: #ffffff;
@@ -232,10 +248,10 @@
   --z-reading: 60;
   --z-dialog: 100;
   --z-toast: 200;
-  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", InterVariable, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
   --font-serif: ui-serif, "New York", "Iowan Old Style", Georgia, "Times New Roman", serif;
-  --font-rounded: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-rounded: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, InterVariable, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .text-hero {

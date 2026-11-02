@@ -38,6 +38,18 @@ def build_tokens_css(tokens):
     themed = tokens["color"]["tokens"] + tokens.get("shadow", {}).get("tokens", [])
     out = [HEADER]
 
+    # Shrift fayllari dist/ dan bir pog‘ona yuqorida (fonts/) — yo‘l CSS fayliga nisbatan
+    for font in tokens["type"].get("fonts", []):
+        out.append(
+            "@font-face {\n"
+            f"  font-family: {font['family']};\n"
+            f"  font-style: {font.get('style', 'normal')};\n"
+            f"  font-weight: {font.get('weight', '400')};\n"
+            "  font-display: swap;\n"
+            f"  src: url(\"../{font['file']}\") format(\"woff2\");\n"
+            "}\n"
+        )
+
     for theme in themes:
         if theme == first:
             selector = f':root,\n[data-theme="{theme}"]'

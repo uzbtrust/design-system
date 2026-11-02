@@ -44,4 +44,4 @@ apple.com va developer.apple.com uslubidagi sayt sahifasi: oq va kulrang bandlar
 - 375, 768 va 1440px: GlobalNav 833px dan, LocalNav 734px dan menyuga o‘tadi; tile'lar telefonda bitta ustun.
 - Har bandda bitta urg‘u: bitta `btn-primary` yoki bitta `eyebrow-new`.
 - Qorong‘u orollarda matn va tugmalar o‘qiladi (tokenlar o‘zi almashadi — qo‘lda rang yozilmagan).
-- Shrift fayli ulanmagan, `@font-face` yo‘q; Apple qurilmasida SF, boshqasida Helvetica Neue / Arial.
+- Shrift faqat `dist/uzbtrust.css` orqali: Apple qurilmasida SF, boshqasida Inter. Boshqa veb-shrift ulanmagan.

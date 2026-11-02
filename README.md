@@ -40,6 +40,7 @@ Agent `AGENTS.md` ni o‘qiydi: qaysi faylni qachon ochish, CSS'ni qanday ulash,
 | `components/<Nom>/` | Har komponent: `README.md` (tuzilma, qoidalar) va `example.html` (namuna) |
 | `dist/uzbtrust.css` | Ulanadigan fayl: `tokens.css` + `bundle.css` |
 | `dist/tokens.css` | Faqat tokenlar (CSS o‘zgaruvchilar va type klasslari) |
+| `fonts/` | Inter 4.1 (variable) — Apple bo‘lmagan qurilmalar uchun SF o‘rnini bosuvchi, OFL |
 | `assets/Logos` · `Icons` · `Marks` | Logo (PNG), 43 ta Lucide ikoni (SVG), mahsulot belgisi namunalari |
 | `examples/site.html` | apple.com uslubidagi to‘liq sayt namunasi |
 | `scripts/build.py` | `dist/` ni qayta yig‘adi |
@@ -55,7 +56,9 @@ Agent `AGENTS.md` ni o‘qiydi: qaysi faylni qachon ochish, CSS'ni qanday ulash,
 
 ## Shrift
 
-Tizim shrift faylini o‘z ichiga olmaydi. `--font-sans` Apple qurilmalarida haqiqiy San Francisco'ni (SF Pro) beradi, `--font-mono` — SF Mono, `--font-serif` — New York, `--font-rounded` — SF Pro Rounded. Boshqa qurilmalarda Helvetica Neue / Arial. SF fayllari bu repoga qo‘shilmaydi: Apple litsenziyasi ularni faqat Apple platformalari uchun interfeys maketlarida ishlatishga ruxsat beradi va tarqatishni taqiqlaydi.
+- **Apple qurilmalarida** — haqiqiy San Francisco, tizimning o‘zidan: `--font-sans` → SF Pro, `--font-mono` → SF Mono, `--font-serif` → New York, `--font-rounded` → SF Pro Rounded.
+- **Boshqa qurilmalarda** (Windows, Android, Linux) — **Inter 4.1**, SF'ga eng yaqin ochiq shrift. U `fonts/` da turadi va `dist/uzbtrust.css` bilan o‘zi ulanadi; Apple qurilmasida yuklanmaydi ham. Litsenziya: SIL OFL 1.1 (`fonts/LICENSE.txt`).
+- Apple'ning SF fayllari repoga qo‘shilmaydi: ularning litsenziyasi faqat Apple platformalari uchun maket chizishga ruxsat beradi va tarqatishni taqiqlaydi.
 
 ## Versiyalar
 
