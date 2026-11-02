@@ -11,7 +11,11 @@ uzbtrust logosi — bir tekis ko‘k (`#0071E3`) yulduz; yonida kichik harflarda
 ```html
 <a class="wordmark" href="/"><img src="uzbtrust-star.svg" alt="" width="22"><span class="wordmark-text">uzbtrust</span></a>
 ```
-Favicon: `<link rel="icon" type="image/svg+xml" href="uzbtrust-logo.svg">`, eski brauzerlar uchun yonida `<link rel="icon" type="image/png" href="uzbtrust-logo.png">`.
+Favicon — avval PNG, keyin SVG: SVG'ni qo‘llaydigan brauzer uni oladi, qolganlari PNG'ni.
+```html
+<link rel="icon" type="image/png" href="uzbtrust-logo.png">
+<link rel="icon" type="image/svg+xml" href="uzbtrust-logo.svg">
+```
 
 ## Qoidalar
 - Rang faqat `#0071E3` (`accent` ning yorug‘ qiymati) — qorong‘u mavzuda ham o‘zgarmaydi. Gradient, soya, kontur, aylantirish, cho‘zish yo‘q.
