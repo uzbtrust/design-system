@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>uzbtrust — namunalar</title>
+<meta name="description" content="uzbtrust dizayn tizimi: 38 komponent va to‘liq sayt namunasi.">
+<script>document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";</script>
+<link rel="stylesheet" href="dist/uzbtrust.css">
+<link rel="icon" href="assets/Logos/uzbtrust-logo.png">
+</head>
+<body>
+
+<main>
+  <div class="wrap" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;">
+    <header class="page-head">
+      <div class="page-head-text">
+        <a class="wordmark" href="https://github.com/uzbtrust/design-system"><img src="assets/Logos/uzbtrust-star.png" alt="" width="22" height="21"><span class="wordmark-text">uzbtrust</span></a>
+        <h1 class="page-title">Namunalar.<span class="dim">38 komponent jonli ko‘rinishda.</span></h1>
+        <p class="page-lead">Har komponent o‘z sahifasida, tizim CSS’i bilan. Mavzu qurilmangizga ergashadi.</p>
+      </div>
+      <div class="page-actions">
+        <a class="link-more" href="https://github.com/uzbtrust/design-system">GitHub</a>
+      </div>
+    </header>
+  </div>
+
+  <section class="tile-grid" aria-label="To‘liq namuna" style="margin-top: var(--s-8);">
+    <article class="tile tile-hero" data-theme="dark" style="min-height: 0; padding-bottom: 64px;">
+      <div class="tile-copy">
+        <p class="eyebrow">To‘liq namuna</p>
+        <h2 class="tile-title">Namuna sayt.</h2>
+        <p class="tile-sub">Ribbon, navigatsiya, tile’lar, galereya, savollar va footer — bitta sahifada.</p>
+        <div class="tile-ctas">
+          <a class="btn btn-primary" href="examples/site.html">Ochish</a>
+          <a class="btn btn-secondary" href="https://github.com/uzbtrust/design-system/blob/main/examples/site.html">Manba</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <div class="band" id="komponentlar">
+  <section aria-labelledby="g-sayt">
+    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title" id="g-sayt">Sayt.</h2></div>
+    <div class="info-grid" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;">
+      <article class="info-card"><h3 class="info-title">GlobalNav</h3><p class="info-text">Saytning eng yuqori navigatsiyasi: chapda uzbtrust yulduzi, o‘rtada bo‘limlar teng taqsimlangan, o‘ngda qidiruv.</p><a class="btn btn-primary btn-xs" href="components/GlobalNav/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">LocalNav</h3><p class="info-text">Sahifa yoki mahsulot ichidagi yopishqoq navigatsiya: chapda sahifa nomi, o‘ngda bo‘limlar va bitta kichik asosiy amal.</p><a class="btn btn-primary btn-xs" href="components/LocalNav/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Ribbon</h3><p class="info-text">Sahifa tepasidagi bir qatorli e’lon tasmasi: bitta jumla va <code>›</code> li havola.</p><a class="btn btn-primary btn-xs" href="components/Ribbon/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Tile</h3><p class="info-text">Sayt bosh sahifasining promo bloki: tepada markazda sarlavha, bir qatorli davomi, ikki tugma, ostida katta rasm yoki vizual.</p><a class="btn btn-primary btn-xs" href="components/Tile/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">InfoCard</h3><p class="info-text">Statik ma’lumot kartasi: sarlavha, bir-ikki jumlali tavsif va pastda bitta kichik amal.</p><a class="btn btn-primary btn-xs" href="components/InfoCard/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Gallery</h3><p class="info-text">Gorizontal karusel: skroll bilan suriladigan kartalar, ostida nuqtali navigatsiya va ikki doira strelka.</p><a class="btn btn-primary btn-xs" href="components/Gallery/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Accordion</h3><p class="info-text">Ochiladigan savol-javob ro‘yxati (FAQ): savol qatori va «+» belgisi, bosilganda javob ochiladi, «+» esa «−» ga aylanadi.</p><a class="btn btn-primary btn-xs" href="components/Accordion/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Footer</h3><p class="info-text">Sayt pastki qismi: izohlar, bo‘limlar xaritasi va huquqiy qator.</p><a class="btn btn-primary btn-xs" href="components/Footer/example.html">Ochish</a></article>
+    </div>
+  </section>
+  <section aria-labelledby="g-sahifa-va-qobiq" style="margin-top: var(--s-9);">
+    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title" id="g-sahifa-va-qobiq">Sahifa va qobiq.</h2></div>
+    <div class="info-grid" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;">
+      <article class="info-card"><h3 class="info-title">Topbar</h3><p class="info-text">Yopishqoq shisha yuqori panel: chapda wordmark, markazda bo‘limlar segmenti, o‘ngda mavzu va hisob menyusi.</p><a class="btn btn-primary btn-xs" href="components/Topbar/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">PageHead</h3><p class="info-text">Ichki sahifa sarlavhasi: eyebrow (sana), ulkan ikki qatorli sarlavha, lead va o‘ngda amallar.</p><a class="btn btn-primary btn-xs" href="components/PageHead/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Hero</h3><p class="info-text">Markazlashgan katta kirish bloki: eyebrow, ikki qatorli ulkan sarlavha (ikkinchisi kulrang), lead va amallar.</p><a class="btn btn-primary btn-xs" href="components/Hero/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Facts</h3><p class="info-text">Katta raqamlar qatori: sarlavha ostida asosiy ko‘rsatkichlar.</p><a class="btn btn-primary btn-xs" href="components/Facts/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">DocumentPage</h3><p class="info-text">Chop etiladigan yoki PDF hujjat sahifasi: muqova sarlavhasi, raqamlar, bo‘limlar, chegarali grafik va jadval — <code>print</code> mavzusida.</p><a class="btn btn-primary btn-xs" href="components/DocumentPage/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Logo</h3><p class="info-text">uzbtrust logosi — bir tekis ko‘k (<code>#0071E3</code>) yulduz; yonida kichik harflarda «uzbtrust» yozuvi bilan wordmark hosil qiladi.</p><a class="btn btn-primary btn-xs" href="components/Logo/example.html">Ochish</a></article>
+    </div>
+  </section>
+  <section aria-labelledby="g-amallar" style="margin-top: var(--s-9);">
+    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title" id="g-amallar">Amallar.</h2></div>
+    <div class="info-grid" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;">
+      <article class="info-card"><h3 class="info-title">Button</h3><p class="info-text">Pill shaklidagi tugma: ekranda bitta asosiy amal <code>btn-primary</code>, qolganlari yumshoqroq.</p><a class="btn btn-primary btn-xs" href="components/Button/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">IconButton</h3><p class="info-text">Faqat ikondan iborat dumaloq 32px tugma: yopish, qidirish, tahrirlash, mavzu.</p><a class="btn btn-primary btn-xs" href="components/IconButton/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">ChipButton</h3><p class="info-text">Kichik pill tugmalar: tezkor tanlov (<code>chip-button</code>) va yoqib-o‘chiriladigan sokin amallar (<code>quiet-button</code>).</p><a class="btn btn-primary btn-xs" href="components/ChipButton/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Segmented</h3><p class="info-text">Sirpanuvchi indikatorli segmentli tanlov: bo‘limlar, filtr yoki rejim orasidan bittasi.</p><a class="btn btn-primary btn-xs" href="components/Segmented/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Stepper</h3><p class="info-text">Son kiritish: minus, katta raqam va plus bitta pill ichida.</p><a class="btn btn-primary btn-xs" href="components/Stepper/example.html">Ochish</a></article>
+    </div>
+  </section>
+  <section aria-labelledby="g-formalar" style="margin-top: var(--s-9);">
+    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title" id="g-formalar">Formalar.</h2></div>
+    <div class="info-grid" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;">
+      <article class="info-card"><h3 class="info-title">Field</h3><p class="info-text">Forma maydoni: yorliq, kiritish va izoh.</p><a class="btn btn-primary btn-xs" href="components/Field/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">PillField</h3><p class="info-text">Ro‘yxat ustidagi asboblar paneli uchun pill shaklidagi qidiruv va tanlov maydonlari.</p><a class="btn btn-primary btn-xs" href="components/PillField/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">StackedFields</h3><p class="info-text">Bir-biriga yopishgan maydonlar guruhi: kirish, ro‘yxatdan o‘tish, parol.</p><a class="btn btn-primary btn-xs" href="components/StackedFields/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">DatePicker</h3><p class="info-text">Sana tanlash: tugma, tezkor chiplar va ostida ochiladigan kichik kalendar.</p><a class="btn btn-primary btn-xs" href="components/DatePicker/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">DropZone</h3><p class="info-text">Fayl yuklash zonasi: bosish yoki sudrab tashlash; ustidan fayl o‘tganda ko‘k bo‘ladi.</p><a class="btn btn-primary btn-xs" href="components/DropZone/example.html">Ochish</a></article>
+    </div>
+  </section>
+  <section aria-labelledby="g-ro-yxat-karta-ma-lumot" style="margin-top: var(--s-9);">
+    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title" id="g-ro-yxat-karta-ma-lumot">Ro‘yxat, karta, ma’lumot.</h2></div>
+    <div class="info-grid" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;">
+      <article class="info-card"><h3 class="info-title">InsetList</h3><p class="info-text">Guruhlangan «inset» ro‘yxat: kulrang yuza ichida qatorlar, chapda holat belgisi, o‘ngda meta va chevron.</p><a class="btn btn-primary btn-xs" href="components/InsetList/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Card</h3><p class="info-text">Bosiladigan karta: kichik eyebrow yoki haqiqiy ko‘rsatkich, sarlavha, qisqa izoh va meta.</p><a class="btn btn-primary btn-xs" href="components/Card/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">LinkCard</h3><p class="info-text">Havola kartasi: sayt belgisi, nomi va manzili.</p><a class="btn btn-primary btn-xs" href="components/LinkCard/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">StatsTable</h3><p class="info-text">Statistika jadvali: har qatorda ism, bitta rangli gorizontal ustun va raqamlar.</p><a class="btn btn-primary btn-xs" href="components/StatsTable/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">BarChart</h3><p class="info-text">Kunlik ustunli grafik: bitta o‘lchov — bitta rang.</p><a class="btn btn-primary btn-xs" href="components/BarChart/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Progress</h3><p class="info-text">Jarayonning ikki ko‘rinishi: bosqichlar chizig‘i (<code>steps</code>) va voqealar tarixi (<code>timeline</code>).</p><a class="btn btn-primary btn-xs" href="components/Progress/example.html">Ochish</a></article>
+    </div>
+  </section>
+  <section aria-labelledby="g-holat-va-xabar" style="margin-top: var(--s-9);">
+    <div class="band-head" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;"><h2 class="band-title" id="g-holat-va-xabar">Holat va xabar.</h2></div>
+    <div class="info-grid" style="max-width: calc(var(--max-narrow) + 44px); padding-inline: 22px;">
+      <article class="info-card"><h3 class="info-title">Notice</h3><p class="info-text">Joyida turadigan xabarlar: ma’lumot (<code>notice</code>), ogohlantirish (<code>notice is-warn</code>), sahifa banneri (<code>banner</code>) va forma xatosi (<code>error-message</code>).</p><a class="btn btn-primary btn-xs" href="components/Notice/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Toast</h3><p class="info-text">Ekran tepasidan tushadigan bildirishnoma banneri: bitta jumla va ixtiyoriy bitta amal.</p><a class="btn btn-primary btn-xs" href="components/Toast/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Sheet</h3><p class="info-text">Varaq ko‘rinishidagi dialog: sarlavha, aylanadigan tana va pastda amallar.</p><a class="btn btn-primary btn-xs" href="components/Sheet/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Empty</h3><p class="info-text">Bo‘sh holat: ikon, qisqa sarlavha, bir jumla va bitta amal.</p><a class="btn btn-primary btn-xs" href="components/Empty/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">StatusGlyph</h3><p class="info-text">Jarayon holatining shakli: bo‘sh doira → yarim → nuqtali doira → belgi → ✕.</p><a class="btn btn-primary btn-xs" href="components/StatusGlyph/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Tag</h3><p class="info-text">Kichik pill yorliqlar: holat, muhimlik, son va muddat.</p><a class="btn btn-primary btn-xs" href="components/Tag/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Stars</h3><p class="info-text">Muhimlik yoki baho: 1–5 yulduz.</p><a class="btn btn-primary btn-xs" href="components/Stars/example.html">Ochish</a></article>
+      <article class="info-card"><h3 class="info-title">Avatar</h3><p class="info-text">Bosh harflardan iborat dumaloq belgi: rasm o‘rniga, doim neytral kulrang gradientda.</p><a class="btn btn-primary btn-xs" href="components/Avatar/example.html">Ochish</a></article>
+    </div>
+  </section>
+  </div>
+</main>
+
+<footer class="sitefoot">
+  <div class="sitefoot-inner">
+    <div class="sitefoot-legal">
+      <p class="sitefoot-copy">© 2026 uzbtrust.</p>
+      <ul class="sitefoot-links"><li><a href="https://github.com/uzbtrust/design-system">GitHub</a></li><li><a href="https://github.com/uzbtrust/design-system/blob/main/docs/brand.md">Brend kitobi</a></li><li><a href="https://github.com/uzbtrust/design-system/blob/main/AGENTS.md">AI uchun</a></li></ul>
+      <p class="sitefoot-locale">O‘zbekiston</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -4,6 +4,8 @@ Har qanday ish uchun yagona vizual til: sayt, veb-ilova, PDF hujjat, taqdimot, r
 
 ## Tez boshlash
 
+Namunalarni brauzerda ko‘rish: [uzbtrust.github.io/design-system](https://uzbtrust.github.io/design-system/)
+
 Sahifaga bitta fayl ulanadi — tokenlar va 38 ta komponent:
 
 ```html
