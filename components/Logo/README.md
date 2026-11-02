@@ -3,13 +3,15 @@
 uzbtrust logosi — bir tekis ko‘k (`#0071E3`) yulduz; yonida kichik harflarda «uzbtrust» yozuvi bilan wordmark hosil qiladi.
 
 ## Fayllar
-- `assets/Logos/uzbtrust-logo.png` — 2560×2560, shaffof fon, atrofida bo‘sh joy bilan. Ilova ikonkasi, favicon, avatar, ijtimoiy tarmoq rasmi uchun.
-- `assets/Logos/uzbtrust-star.png` — 1400×1346, bo‘sh joyi qirqilgan. Wordmark, hujjat sarlavhasi va matn yonida ishlatish uchun.
+- `assets/Logos/uzbtrust-logo.svg` — viewBox 2560×2560, shaffof fon, atrofida bo‘sh joy bilan. Ilova ikonkasi, favicon, avatar, ijtimoiy tarmoq rasmi uchun.
+- `assets/Logos/uzbtrust-star.svg` — viewBox 1400×1346, bo‘sh joyi qirqilgan. Wordmark, hujjat sarlavhasi va matn yonida ishlatish uchun.
+- SVG — asosiy fayl, istalgan o‘lchamda tiniq. Xuddi shu nomdagi `.png` (2560×2560, 1400×1346) — zaxira, faqat SVG qabul qilinmaydigan joyda.
 
 ## Tuzilma
 ```html
-<a class="wordmark" href="/"><img src="uzbtrust-star.png" alt="" width="22"><span class="wordmark-text">uzbtrust</span></a>
+<a class="wordmark" href="/"><img src="uzbtrust-star.svg" alt="" width="22"><span class="wordmark-text">uzbtrust</span></a>
 ```
+Favicon: `<link rel="icon" type="image/svg+xml" href="uzbtrust-logo.svg">`, eski brauzerlar uchun yonida `<link rel="icon" type="image/png" href="uzbtrust-logo.png">`.
 
 ## Qoidalar
 - Rang faqat `#0071E3` (`accent` ning yorug‘ qiymati) — qorong‘u mavzuda ham o‘zgarmaydi. Gradient, soya, kontur, aylantirish, cho‘zish yo‘q.

@@ -122,7 +122,7 @@ Tuzilma, ma’lumot va funksiya o‘zgarmaydi — faqat ko‘rinish va ovoz.
 
 ## Logo va wordmark
 
-- **uzbtrust logosi** — bir tekis ko‘k (`#0071E3`) yulduz, `assets/Logos` da. Ikonka va favicon uchun `uzbtrust-logo.png` (bo‘sh joyli), matn yonida `uzbtrust-star.png` (qirqilgan). Rang qorong‘u fonda ham o‘zgarmaydi; gradient, soya va kontur qo‘shilmaydi, ko‘k yoki rangli fon ustiga qo‘yilmaydi. Batafsil — `Logo` komponenti.
+- **uzbtrust logosi** — bir tekis ko‘k (`#0071E3`) yulduz, `assets/Logos` da. Ikonka va favicon uchun `uzbtrust-logo.svg` (bo‘sh joyli), matn yonida `uzbtrust-star.svg` (qirqilgan); SVG — asosiy fayl, xuddi shu nomdagi PNG — zaxira. Rang qorong‘u fonda ham o‘zgarmaydi; gradient, soya va kontur qo‘shilmaydi, ko‘k yoki rangli fon ustiga qo‘yilmaydi. Batafsil — `Logo` komponenti.
 - **Wordmark:** yulduz + «uzbtrust» (doim kichik harflarda), 17px/600 matn yonida 22px yulduz, oraliq 9px. Logoni qayta chizmang va taxminiy nusxasini yasamang — faqat fayllarni ishlating.
 - **Mahsulot belgisi qolipi:** `accent` rangli yumaloq kvadrat (burchak radiusi tomonning ~25%i) ichida oq belgi, yonida nom. Belgi 20–22px, nomgacha 9px, hoverda opacity 0.72; telefonda nom yashiriladi. Namunalar — `assets/Marks`.
 
