@@ -1,6 +1,6 @@
 # Tile
 
-Sayt bosh sahifasining promo bloki (apple.com tile uslubida): tepada markazda sarlavha, bir qatorli davomi, ikki tugma, ostida katta rasm yoki vizual. Bitta katta (`tile-hero`) va ikki ustunli kichiklar.
+Sayt bosh sahifasining promo bloki: tepada markazda sarlavha, bir qatorli davomi, ikki tugma, ostida katta rasm yoki vizual. Bitta katta (`tile-hero`) va ikki ustunli kichiklar.
 
 ## Tuzilma
 ```html
@@ -24,7 +24,7 @@ Sayt bosh sahifasining promo bloki (apple.com tile uslubida): tepada markazda sa
 ```
 
 ## Qoidalar
-- To‘r: tile'lar orasida 12px (`s-3`), chetlarda 12px; `tile-hero` butun kenglikda, chetsiz. Burchaklar to‘g‘ri (radius 0) — apple.com'dagi kabi; telefonda bitta ustun.
+- To‘r: tile'lar orasida 12px (`s-3`), chetlarda 12px; `tile-hero` butun kenglikda, chetsiz. Burchaklar to‘g‘ri (radius 0); telefonda bitta ustun.
 - Katta tile: balandligi 692px, tepadan 56px; sarlavha `text-tile` (`--fs-tile` 32 → 56px, `track-tile`), davomi 19 → 28px (`track-eyebrow`). Kichik tile: 580px, tepadan 53px; sarlavha `text-tile-sm` (32 → 40px), davomi `text-intro`.
 - Fon: yorug‘ tile — `bg-alt`, katta tile — `bg`; qorong‘u tile — `data-theme="dark"` (fon `bg`, ya’ni #000). Yorug‘ va qorong‘u tile'lar navbatma-navbat keladi.
 - Tugmalar: `btn-primary` + `btn-secondary` (17px, 44px), telefonda 14px/36px. Ikkitadan ko‘p emas; bittasi bo‘lishi mumkin.

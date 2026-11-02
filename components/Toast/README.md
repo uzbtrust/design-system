@@ -1,6 +1,6 @@
 # Toast
 
-Ekran tepasidan tushadigan bildirishnoma banneri (iOS bildirishnomasi kabi): bitta jumla va ixtiyoriy bitta amal.
+Ekran tepasidan tushadigan bildirishnoma banneri: bitta jumla va ixtiyoriy bitta amal.
 
 ## Tuzilma
 ```html

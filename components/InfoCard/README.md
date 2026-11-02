@@ -1,6 +1,6 @@
 # InfoCard
 
-Statik ma’lumot kartasi (developer.apple.com uslubida): sarlavha, bir-ikki jumlali tavsif va pastda bitta kichik amal. Yuklab olinadigan narsalar, shablonlar va resurslar ro‘yxati uchun.
+Statik ma’lumot kartasi: sarlavha, bir-ikki jumlali tavsif va pastda bitta kichik amal. Yuklab olinadigan narsalar, shablonlar va resurslar ro‘yxati uchun.
 
 ## Tuzilma
 ```html

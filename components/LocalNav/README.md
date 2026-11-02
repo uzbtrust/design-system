@@ -1,6 +1,6 @@
 # LocalNav
 
-Sahifa yoki mahsulot ichidagi yopishqoq navigatsiya (apple.com localnav uslubida): chapda sahifa nomi, o‘ngda bo‘limlar va bitta kichik asosiy amal.
+Sahifa yoki mahsulot ichidagi yopishqoq navigatsiya: chapda sahifa nomi, o‘ngda bo‘limlar va bitta kichik asosiy amal.
 
 ## Tuzilma
 ```html
@@ -23,7 +23,7 @@ Sahifa yoki mahsulot ichidagi yopishqoq navigatsiya (apple.com localnav uslubida
 - Havolalar 12px `fg`, oraliq 24px, hoverda `accent-ink`. Joriy bo‘lim havola emas: `aria-current` va `fg-3`.
 - O‘ngda faqat bitta amal: `btn btn-primary btn-xs` (12px, 24px balandlik, bosish maydoni 44px). Ikkinchi amal kerak bo‘lsa — havola sifatida ro‘yxatga.
 - ≤734px: havolalar yashirinadi, `chevron-down` tugmasi chiqadi; bosilganda `.localnav` ga `is-open`, havolalar panel bo‘lib pastga ochiladi (17px, qatorlar orasida `line-soft`), chevron 180° buriladi.
-- Qorong‘u band ustida — `data-theme="dark"` (developer.apple.com dagi kabi).
+- Qorong‘u band ustida — `data-theme="dark"`.
 
 ## Iste’molchi beradi
 Sahifa nomi, 2–5 bo‘lim havolasi (ankerlar), joriy bo‘lim, bitta amal va telefondagi ochish/yopish skripti.

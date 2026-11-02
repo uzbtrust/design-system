@@ -1,6 +1,6 @@
 # GlobalNav
 
-Saytning eng yuqori navigatsiyasi (apple.com globalnav uslubida): chapda uzbtrust yulduzi, o‘rtada bo‘limlar teng taqsimlangan, o‘ngda qidiruv. Sayt va hujjat sahifalari uchun; ilova ichida — `Topbar`.
+Saytning eng yuqori navigatsiyasi: chapda uzbtrust yulduzi, o‘rtada bo‘limlar teng taqsimlangan, o‘ngda qidiruv. Sayt va hujjat sahifalari uchun; ilova ichida — `Topbar`.
 
 ## Tuzilma
 ```html

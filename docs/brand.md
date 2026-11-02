@@ -1,6 +1,6 @@
 # Brend kitobi
 
-uzbtrust — har qanday ish uchun yagona vizual til: veb-ilova, sayt, PDF hujjat, taqdimot, rasm yoki grafik. Kayfiyati **«Apple, quietly»**: sokin, diqqatli, ortiqchasiz. Natija qaysi ko‘rinishda bo‘lmasin, bir qo‘l ishi ekani bilinib turadi.
+uzbtrust — har qanday ish uchun yagona vizual til: veb-ilova, sayt, PDF hujjat, taqdimot, rasm yoki grafik. Kayfiyati — **sokin, diqqatli, ortiqchasiz**. Natija qaysi ko‘rinishda bo‘lmasin, bir qo‘l ishi ekani bilinib turadi.
 
 ## «uzbtrust'ni ishlat» deyilganda
 
@@ -20,7 +20,7 @@ Bu bo‘lim — tizimni qo‘llaydigan har kim (inson yoki agent) uchun qisqa bu
 - Mavzu `<html>` da almashadi: `data-theme="dark"` yoki `class="dark"`. Uni sahifa chizilishidan oldin `<head>` dagi kichik skript bilan o‘rnating. Odatda tizim mavzusiga ergashing; foydalanuvchi o‘zi bosgandagina tanlovni saqlang.
 - Komponentlar — CSS klasslari va qat’iy HTML tuzilmasi. React, Vue yoki oddiy HTML — farqi yo‘q: komponent README'sidagi tuzilmani o‘sha freymvorkda takrorlang.
 - Ilova qolipi: shisha `Topbar` → `PageHead` (yoki bosh sahifada `Hero`) → `Facts` → asosiy kontent (`InsetList`, `Card` to‘ri, `StatsTable`) → oddiy `.foot`.
-- Sayt qolipi (apple.com uslubida): `Ribbon` → `GlobalNav` → yopishqoq `LocalNav` → `Tile` to‘ri yoki `Hero` → `bg` / `bg-alt` band'lar (`band-head`, `InfoCard`, `Gallery`, `Accordion`) → `Footer`. Batafsil — «Sayt» bo‘limi.
+- Sayt qolipi: `Ribbon` → `GlobalNav` → yopishqoq `LocalNav` → `Tile` to‘ri yoki `Hero` → `bg` / `bg-alt` band'lar (`band-head`, `InfoCard`, `Gallery`, `Accordion`) → `Footer`. Batafsil — «Sayt» bo‘limi.
 - Mavzu oroli: istalgan blokka `data-theme="dark"` (yoki `"light"`) qo‘ying — tokenlar shu blok ichida almashadi. Qorong‘u tile, qorong‘u band yoki qorong‘u hero shunday yasaladi.
 
 ### Hujjat va PDF
@@ -75,12 +75,12 @@ Tuzilma, ma’lumot va funksiya o‘zgarmaydi — faqat ko‘rinish va ovoz.
 
 ## Tipografiya
 
-- **Shrift.** `--font` — Apple'ning San Francisco to‘plami, tizim orqali: Apple qurilmalarida `-apple-system` haqiqiy SF Pro'ni beradi va optik o‘lchamni o‘zi tanlaydi (≈20px dan katta — Display, kichik — Text). `--font-mono` → SF Mono, `--font-serif` → New York, `--font-rounded` → SF Pro Rounded (`ui-rounded`). SF yo‘q joyda (Windows, Android, Linux) — **Inter 4.1** (`InterVariable`, `fonts/`), SF'ga eng yaqin ochiq shrift: og‘irliklari va optik o‘lchami SF kabi ishlaydi, `track-*` unga ham qo‘llanadi. Inter Apple qurilmasida yuklanmaydi.
-- **Apple'ning shrift fayllari tizimga qo‘shilmaydi.** developer.apple.com/fonts dagi SF Pro, SF Compact, SF Mono va New York litsenziyasi ularni faqat Apple platformalari (iOS, iPadOS, macOS, tvOS, watchOS) interfeys maketlari uchun beradi: saytga, PDF'ga yoki boshqa ishga joylash, veb-shrift qilib tarmoqda tarqatish taqiqlangan. Figma'da Apple ilovasi maketini chizish uchun — shriftni o‘z Mac'ingizga Apple saytidan o‘rnating. Tizimdagi yagona `@font-face` — Inter (SIL OFL 1.1). Og‘irliklar: 400 — matn va tugma, 500 — kichik urg‘u, 600 — sarlavha, raqam, qalin matn. 700 ishlatilmaydi (faqat havola belgisidagi harf). Formula uchun `--serif`, kod uchun `--mono`.
+- **Shrift.** `--font` — qurilmaning tizim shrifti: SF bor qurilmada SF Pro, optik o‘lchami o‘zi tanlanadi (≈20px dan katta — Display, kichik — Text). `--font-mono` → SF Mono, `--font-serif` → New York, `--font-rounded` → SF Pro Rounded (`ui-rounded`). SF yo‘q joyda (Windows, Android, Linux) — **Inter 4.1** (`InterVariable`, `fonts/`), SF'ga eng yaqin ochiq shrift: og‘irliklari va optik o‘lchami SF kabi ishlaydi, `track-*` unga ham qo‘llanadi. SF bor qurilmada Inter yuklanmaydi.
+- **SF shrift fayllari tizimga qo‘shilmaydi.** SF Pro, SF Compact, SF Mono va New York litsenziyasi ularni saytga, PDF'ga yoki boshqa ishga joylashni va tarmoqda tarqatishni taqiqlaydi. Figma'da maket chizish uchun shriftni o‘z kompyuteringizga rasmiy manbadan o‘rnating. Tizimdagi yagona `@font-face` — Inter (SIL OFL 1.1). Og‘irliklar: 400 — matn va tugma, 500 — kichik urg‘u, 600 — sarlavha, raqam, qalin matn. 700 ishlatilmaydi (faqat havola belgisidagi harf). Formula uchun `--serif`, kod uchun `--mono`.
 - **Sarlavha naqshi.** Birinchi qator — asosiy fikr, nuqta bilan tugaydi (`text-title` yoki `text-hero`, `fg`). Ikkinchi qator `.dim` (`fg-3`) — holat yoki davomi. Tepada `text-eyebrow`: sana yoki bo‘lim nomi, oddiy harflarda.
 - **O‘lchamlar suyuq.** Ekranda `--fs-hero`, `--fs-title`, `--fs-h1`, `--fs-h3`, `--fs-lead` `clamp()` bilan o‘sadi; type uslublari eng katta qiymatni ko‘rsatadi. Chop uchun `Print` guruhidagi uslublar.
-- **Harf oralig‘i** o‘lchamga bog‘liq (apple.com o‘lchovlari, 2026-noyabr): ≥80px `track-super` (−0.015em), 64–72px `track-hero` (−0.009em), 56px `track-tile` (−0.005em), 40–48px `track-display` (−0.003em), 32px `track-headline` (+0.004em), 28px `track-eyebrow` (+0.007em), 24px `track-title` (+0.009em), 19–21px `track-intro` (+0.011em), 17px `track-body` (−0.022em), 14–15px `track-small` (−0.016em), 12–13px `track-caption` (−0.01em). Shkaladan tashqari qiymat yozmang.
-- **Sayt shkalasi** (apple.com, px / qator balandligi): 80/84 `text-title` · 64/68 `text-h1` · 56/60 `text-tile` · 48/52 `text-h2` · 40/44 `text-tile-sm` · 32/36 `text-subhead` · 28/32 `text-h3` · 24/28 `text-group` · 21/29 `text-intro` · 17/25 `text-body` · 14/20 `text-sm` · 12/16 `text-footnote`. Sarlavhalar 600, matn 400.
+- **Harf oralig‘i** o‘lchamga bog‘liq: ≥80px `track-super` (−0.015em), 64–72px `track-hero` (−0.009em), 56px `track-tile` (−0.005em), 40–48px `track-display` (−0.003em), 32px `track-headline` (+0.004em), 28px `track-eyebrow` (+0.007em), 24px `track-title` (+0.009em), 19–21px `track-intro` (+0.011em), 17px `track-body` (−0.022em), 14–15px `track-small` (−0.016em), 12–13px `track-caption` (−0.01em). Shkaladan tashqari qiymat yozmang.
+- **Sayt shkalasi** (px / qator balandligi): 80/84 `text-title` · 64/68 `text-h1` · 56/60 `text-tile` · 48/52 `text-h2` · 40/44 `text-tile-sm` · 32/36 `text-subhead` · 28/32 `text-h3` · 24/28 `text-group` · 21/29 `text-intro` · 17/25 `text-body` · 14/20 `text-sm` · 12/16 `text-footnote`. Sarlavhalar 600, matn 400.
 - **Ajratilgan paragraf** (`.copy-highlight`): butun paragraf `fg-3` rangida 600, asosiy gap `<strong>` ichida `fg`. «<strong>Raqam so‘zdan kuchli.</strong> Har bo‘limda bitta ko‘rsatkich.» Bir bandda bitta.
 - **«Yangi»** — `.eyebrow-new` (`new` rangi): sarlavha ustidagi bitta so‘z, sahifada bittadan.
 - **Raqamlar** doim `tabular-nums`, 600. Raqam qanday bo‘lsa shunday yoziladi (4, 24) — oldiga nol qo‘shilmaydi, tartib raqami bezak sifatida katta yozilmaydi. Ilova ichida raqam darhol ko‘rinadi; sanab chiqish faqat marketing sahifasida.
@@ -114,11 +114,11 @@ Tuzilma, ma’lumot va funksiya o‘zgarmaydi — faqat ko‘rinish va ovoz.
 
 ## Ikonografiya
 
-- **Tizim:** Lucide (`lucide-react` / `lucide` 0.577.0), chiziq 1.75 — SF Symbols'ning oddiy og‘irligiga yaqin (kichik meta ikonlarida 1.8). Tanlangan holatda ikon to‘ldiriladi, SF Symbols'dagi `.fill` varianti kabi. SF Symbols'ning o‘zi Apple platformalaridan tashqarida ishlatilmaydi (litsenziya). O‘lchami 16–24px, matn bilan bir chiziqda. Rangi `currentColor` — odatda `fg-2`/`fg-3`, faol holatda `accent-ink`.
-- **Qo‘lda chizilgan ikon** kerak bo‘lsa: 24×24 viewBox, 1.5px yumaloq uchli chiziq, SF Symbols ruhida.
+- **Tizim:** Lucide (`lucide-react` / `lucide` 0.577.0), chiziq 1.75 — matnning oddiy og‘irligiga mos (kichik meta ikonlarida 1.8). Tanlangan holatda ikon to‘ldirilgan variantga o‘tadi. O‘lchami 16–24px, matn bilan bir chiziqda. Rangi `currentColor` — odatda `fg-2`/`fg-3`, faol holatda `accent-ink`.
+- **Qo‘lda chizilgan ikon** kerak bo‘lsa: 24×24 viewBox, 1.5px yumaloq uchli chiziq, Lucide ruhida.
 - Emoji va ikon-shrift yo‘q. Tipografik belgilar mumkin: `›` (davomi), `·` (ajratuvchi), `—`.
 - `assets/Icons` — 43 ta Lucide ikonining aynan nusxasi (fayllarda standart chiziq 2 va #6e6e73; kodda `stroke-width="1.75"` va `currentColor`). Kerakli ikon bu yerda bo‘lmasa, Lucide'dan oling.
-- Holat belgilari (`StatusGlyph`) SF Symbols shakllarida: `circle` → `circle.lefthalf.filled` → `circle.dotted` → `checkmark.circle.fill` → `xmark.circle`.
+- Holat belgilari (`StatusGlyph`): bo‘sh doira → yarim to‘ldirilgan → nuqtali doira → belgili to‘la doira → ✕ li doira.
 
 ## Logo va wordmark
 
@@ -129,7 +129,7 @@ Tuzilma, ma’lumot va funksiya o‘zgarmaydi — faqat ko‘rinish va ovoz.
 ## Mavzular
 
 - **`light`** — standart. **`dark`** — ekran uchun; faqat tokenlar o‘zgaradi, komponentlar `var(--…)` orqali o‘zi moslashadi. **`print`** — qog‘oz va PDF.
-- Mavzu butun sahifaga (`<html>`) yoki bitta blokka qo‘yiladi: `<section data-theme="dark">` — mavzu oroli (apple.com'dagi qora tile va bandlar).
+- Mavzu butun sahifaga (`<html>`) yoki bitta blokka qo‘yiladi: `<section data-theme="dark">` — mavzu oroli (qora tile va bandlar).
 - Ekranda `theme-color` meta va mavzu birinchi chizilishdan oldin qo‘yiladi. Almashinuv View Transitions bilan (0.35–0.45s).
 
 ## Kirish imkoniyati

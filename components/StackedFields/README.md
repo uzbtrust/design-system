@@ -1,6 +1,6 @@
 # StackedFields
 
-Bir-biriga yopishgan maydonlar guruhi (Apple ID uslubi): kirish, ro‘yxatdan o‘tish, parol.
+Bir-biriga yopishgan maydonlar guruhi: kirish, ro‘yxatdan o‘tish, parol.
 
 ## Tuzilma
 ```html

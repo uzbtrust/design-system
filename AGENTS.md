@@ -49,7 +49,7 @@ Logo, ikon va belgilarni shu repodan oling. Qayta chizmang, taxminiy nusxa yasam
 ## Asosiy qoidalar (qisqa)
 
 - **Bitta urg‘u rangi:** `accent` (#0071e3). Asosiy amal — `btn btn-primary`, bir ekranda bitta. Ma’no ranglari (`bad`, `warn`, `good`) faqat ma’no uchun, doim so‘z bilan birga.
-- **Shrift:** faqat `--font-sans` (va `--font-mono`, `--font-serif`, `--font-rounded`). Apple qurilmalarida bu San Francisco, boshqalarida — Inter (`dist/uzbtrust.css` uni `fonts/` dan o‘zi ulaydi). Boshqa veb-shrift, Google Fonts yoki SF shrift fayllarini **qo‘shmang**: Apple litsenziyasi SF fayllarini saytga joylash va tarqatishni taqiqlaydi. CSS'ni inline qilsangiz, `@font-face` dagi `../fonts/…` yo‘lini `https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/fonts/…` ga almashtiring.
+- **Shrift:** faqat `--font-sans` (va `--font-mono`, `--font-serif`, `--font-rounded`). SF bor qurilmada bu SF, boshqalarida — Inter (`dist/uzbtrust.css` uni `fonts/` dan o‘zi ulaydi). Boshqa veb-shrift, Google Fonts yoki SF shrift fayllarini **qo‘shmang**: SF litsenziyasi bu fayllarni saytga joylash va tarqatishni taqiqlaydi. CSS'ni inline qilsangiz, `@font-face` dagi `../fonts/…` yo‘lini `https://cdn.jsdelivr.net/gh/uzbtrust/design-system@v1/fonts/…` ga almashtiring.
 - **Tipografiya:** sarlavha 600, harf oralig‘i o‘lchamga qarab (`track-*`), ikkinchi qator kulrang (`.dim`). Bosh harfli yorliq, emoji, gradient, rangli nur yo‘q.
 - **Yuzalar:** kartalar `card` foni, `r-lg`, chegarasiz; soya faqat hover, menyu va dialogda.
 - **Matn:** standart til — o‘zbekcha (lotin). `o‘`, `g‘` uchun ‘ (U+2018), tutuq belgisi ’ (U+2019), qo‘shtirnoq «…», sentence case. Haqiqiy odam ismlarini misol qilib yozmang — «Foydalanuvchi», «Ism va familiya».

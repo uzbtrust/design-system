@@ -1,6 +1,6 @@
 # Sayt
 
-apple.com va developer.apple.com uslubidagi sayt sahifasi: oq va kulrang bandlar, katta sarlavhalar, shisha navigatsiya, kam so‘z. Liquid Glass emas — oddiy apple.com veb tili. O‘lchamlar 2026-yil noyabrda apple.com'dan o‘lchangan.
+uzbtrust sayt sahifasi: oq va kulrang bandlar, katta sarlavhalar, shisha navigatsiya, kam so‘z. Murakkab effektlarsiz — oddiy va sokin veb tili.
 
 ## Sahifa tuzilishi
 
@@ -29,7 +29,7 @@ apple.com va developer.apple.com uslubidagi sayt sahifasi: oq va kulrang bandlar
 
 - Butun sahifa: `<html data-theme="dark">`. Bitta blok: `<section data-theme="dark">` — mavzu oroli; ichidagi har bir token qorong‘u qiymatini oladi, komponentlarga hech narsa qo‘shilmaydi.
 - Bosh sahifada yorug‘ va qorong‘u tile'lar navbatma-navbat. Qorong‘u tile foni — `bg` (#000).
-- developer.apple.com'dagi kabi to‘liq qorong‘u sahifa: `dark` mavzu, bandlar `bg` (#000) va `bg-alt` (#111113), kartalar `card` (#1c1c1e).
+- To‘liq qorong‘u sahifa: `dark` mavzu, bandlar `bg` (#000) va `bg-alt` (#111113), kartalar `card` (#1c1c1e).
 
 ## Matn
 
@@ -44,4 +44,4 @@ apple.com va developer.apple.com uslubidagi sayt sahifasi: oq va kulrang bandlar
 - 375, 768 va 1440px: GlobalNav 833px dan, LocalNav 734px dan menyuga o‘tadi; tile'lar telefonda bitta ustun.
 - Har bandda bitta urg‘u: bitta `btn-primary` yoki bitta `eyebrow-new`.
 - Qorong‘u orollarda matn va tugmalar o‘qiladi (tokenlar o‘zi almashadi — qo‘lda rang yozilmagan).
-- Shrift faqat `dist/uzbtrust.css` orqali: Apple qurilmasida SF, boshqasida Inter. Boshqa veb-shrift ulanmagan.
+- Shrift faqat `dist/uzbtrust.css` orqali: SF bor qurilmada SF, boshqasida Inter. Boshqa veb-shrift ulanmagan.

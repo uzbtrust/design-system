@@ -6,7 +6,7 @@ Silliq, biroz prujinali, hech qachon ko‘z-ko‘z qilmaydigan. Faqat `transform
 
 | O‘zgaruvchi | Qiymat | Qayerda |
 |---|---|---|
-| `--ease` | `cubic-bezier(0.28, 0.11, 0.32, 1)` | apple.com egri chizig‘i: hover, rang, kichik o‘tishlar |
+| `--ease` | `cubic-bezier(0.28, 0.11, 0.32, 1)` | asosiy egri chiziq: hover, rang, kichik o‘tishlar |
 | `--ease-out` | `cubic-bezier(0.16, 1, 0.3, 1)` | expo-out: kirish, dialog, indikator, karta ko‘tarilishi |
 | `--ease-in-out` | `cubic-bezier(0.65, 0, 0.35, 1)` | joy almashish |
 | `--ease-spring` | `cubic-bezier(0.34, 1.56, 0.64, 1)` | holat belgisi, yulduz bosilishi |
@@ -14,7 +14,7 @@ Silliq, biroz prujinali, hech qachon ko‘z-ko‘z qilmaydigan. Faqat `transform
 | `--t` | `0.4s` | rang va shaffoflik o‘tishlari |
 | `--t-slow` | `0.8s` | progress ustunlari, katta o‘zgarishlar |
 
-GSAP ishlatilsa: davomiylik .25 / .5 / .8 / 1.2s; `expo.out` — kirishlar, `power3.out` — standart, `power3.inOut` — indikatorlar, `apple` CustomEase (0.28, 0.11, 0.32, 1) — mikro-harakatlar.
+GSAP ishlatilsa: davomiylik .25 / .5 / .8 / 1.2s; `expo.out` — kirishlar, `power3.out` — standart, `power3.inOut` — indikatorlar, `uzbtrust` CustomEase (0.28, 0.11, 0.32, 1) — mikro-harakatlar.
 
 ## Naqshlar
 

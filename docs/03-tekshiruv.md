@@ -5,7 +5,7 @@ Har yangi ish shu ro‘yxatdan o‘tadi. Muhitga tegishli bo‘lmagan bandlarni 
 ## Hamma muhitda
 
 - **Tizimdan tashqari narsa yo‘q:** bitta urg‘u rangi, SF shrift to‘plami, tizim radiuslari, emoji va gradient yo‘q.
-- **Apple tipografiyasi:** sarlavha 600, harf oralig‘i `track-*` bo‘yicha; bosh harfli yorliq, nol bilan to‘ldirilgan raqam, yozilib-o‘chadigan matn va rangli nur yo‘q.
+- **Tipografiya:** sarlavha 600, harf oralig‘i `track-*` bo‘yicha; bosh harfli yorliq, nol bilan to‘ldirilgan raqam, yozilib-o‘chadigan matn va rangli nur yo‘q.
 - **Iyerarxiya:** har sahifa yoki slaydda uch daraja; sarlavha ikki qatordan oshmaydi.
 - **Kontrast:** matn 4.5:1, katta matn va ma’noli ikon 3:1. Holat rang bilan birga so‘z yoki shakl bilan ham berilgan.
 - **Matn:** ‘ va ’ belgilari to‘g‘ri, qo‘shtirnoq tilga mos, sentence case, haqiqiy ism misol sifatida yo‘q.

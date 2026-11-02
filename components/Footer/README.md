@@ -1,6 +1,6 @@
 # Footer
 
-Sayt pastki qismi (apple.com footer uslubida): izohlar, bo‘limlar xaritasi va huquqiy qator. Hammasi 12px, kulrang, `bg-alt` fonda.
+Sayt pastki qismi: izohlar, bo‘limlar xaritasi va huquqiy qator. Hammasi 12px, kulrang, `bg-alt` fonda.
 
 ## Tuzilma
 ```html

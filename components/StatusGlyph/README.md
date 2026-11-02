@@ -1,6 +1,6 @@
 # StatusGlyph
 
-Jarayon holatining shakli: bo‘sh doira → yarim → nuqtali doira → belgi → ✕ (SF Symbols: `circle`, `circle.lefthalf.filled`, `circle.dotted`, `checkmark.circle.fill`, `xmark.circle`). Rang emas, shakl o‘zgaradi.
+Jarayon holatining shakli: bo‘sh doira → yarim → nuqtali doira → belgi → ✕. Rang emas, shakl o‘zgaradi.
 
 ## Tuzilma
 ```html

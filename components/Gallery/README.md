@@ -1,6 +1,6 @@
 # Gallery
 
-Gorizontal karusel (apple.com «highlights» uslubida): skroll bilan suriladigan kartalar, ostida nuqtali navigatsiya va ikki doira strelka. Asosiy lahzalar, xususiyatlar yoki rasmlar to‘plami uchun.
+Gorizontal karusel: skroll bilan suriladigan kartalar, ostida nuqtali navigatsiya va ikki doira strelka. Asosiy lahzalar, xususiyatlar yoki rasmlar to‘plami uchun.
 
 ## Tuzilma
 ```html

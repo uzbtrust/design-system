@@ -12,10 +12,10 @@ Pill shaklidagi tugma: ekranda bitta asosiy amal `btn-primary`, qolganlari yumsh
 
 ## Variantlar
 - `btn-primary` — `accent-fill` fon, oq yozuv (4.7:1). Bir ekranda bitta. Hoverda `accent-hover`, bosilganda `accent-press` — ikkalasi biroz to‘qroq.
-- `btn-secondary` — chiziqli pill: shaffof fon, `accent-ink` yozuv va 1px kontur (apple.com'dagi kabi); hoverda `accent-fill` fon va oq yozuv.
+- `btn-secondary` — chiziqli pill: shaffof fon, `accent-ink` yozuv va 1px kontur; hoverda `accent-fill` fon va oq yozuv.
 - `btn-quiet` — `fill` fon, `fg` yozuv: «Bekor qilish», neytral amal.
 - `btn-danger` — chiziqli pill: `bad` yozuv va kontur; hoverda `danger-fill` fon va oq yozuv (5.4:1). Faqat tasdiqlash dialogidagi o‘chirish; boshqa joyda — `btn-text is-danger`.
-- O‘lchamlar (apple.com o‘lchovlari): `btn` — 17px, 44px (asosiy); `btn-sm` — 14px, 36px (telefondagi `Tile`, zich bloklar); `btn-xs` — 12px, 24px (`LocalNav`, `InfoCard`); `btn-lg` — 18px, 52px (hero va kirish oynasi). `btn-sm` va `btn-xs` ko‘rinishi kichik, bosish maydoni baribir 44px (`::before`). `btn-block` — butun kenglik.
+- O‘lchamlar: `btn` — 17px, 44px (asosiy); `btn-sm` — 14px, 36px (telefondagi `Tile`, zich bloklar); `btn-xs` — 12px, 24px (`LocalNav`, `InfoCard`); `btn-lg` — 18px, 52px (hero va kirish oynasi). `btn-sm` va `btn-xs` ko‘rinishi kichik, bosish maydoni baribir 44px (`::before`). `btn-block` — butun kenglik.
 - `link-more` — `›` li matnli havola, ikkilamchi amal uchun; hoverda `›` 3px suriladi.
 - `btn-text` — ramkasiz matnli tugma (`is-danger` bilan qizil): varaq pastidagi kichik amallar.
 

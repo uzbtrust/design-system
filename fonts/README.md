@@ -7,17 +7,13 @@
 
 ## Qachon ishlaydi
 
-`--font-sans` stekida Inter Apple tizim shriftidan keyin turadi:
+`--font-sans` stekida Inter tizim shriftidan (SF) keyin, Helvetica Neue va Arial'dan oldin turadi.
 
-```
--apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", InterVariable, "Helvetica Neue", Helvetica, Arial, sans-serif
-```
-
-- Mac, iPhone, iPad — haqiqiy SF; Inter yuklanmaydi ham (brauzer ishlatilmaydigan shriftni yuklamaydi).
+- SF bor qurilmalarda — SF; Inter yuklanmaydi ham (brauzer ishlatilmaydigan shriftni yuklamaydi).
 - Windows, Android, Linux — Inter. Ko‘rinish SF'ga juda yaqin: bir xil og‘irliklar, `track-*` harf oralig‘i, `tabular-nums` raqamlar.
 - `@font-face` `dist/uzbtrust.css` ichida, yo‘l `../fonts/` — CDN orqali ulansa ham ishlaydi.
 
 ## Qoidalar
 
-- Apple'ning SF Pro, SF Compact, SF Mono, New York fayllari bu papkaga qo‘shilmaydi: ularning litsenziyasi tarqatishni taqiqlaydi.
+- SF Pro, SF Compact, SF Mono, New York fayllari bu papkaga qo‘shilmaydi: ularning litsenziyasi tarqatishni taqiqlaydi.
 - Inter'dan boshqa veb-shrift qo‘shilmaydi. Og‘irliklar tizimdagidek: 400, 500, 600.

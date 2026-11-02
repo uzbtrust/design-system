@@ -1,6 +1,6 @@
 # uzbtrust
 
-Har qanday ish uchun yagona vizual til: sayt, veb-ilova, PDF hujjat, taqdimot, rasm. Kayfiyati — **«Apple, quietly»**: apple.com veb uslubiga yaqin, sokin, ortiqchasiz. Bitta urg‘u rangi (`#0071e3`), Apple tizim shrifti, katta sarlavhalar va ko‘p bo‘sh joy.
+Har qanday ish uchun yagona vizual til: sayt, veb-ilova, PDF hujjat, taqdimot, rasm. Kayfiyati — **sokin, aniq, ortiqchasiz**. Bitta urg‘u rangi (`#0071e3`), tizim shrifti, katta sarlavhalar va ko‘p bo‘sh joy.
 
 ## Tez boshlash
 
@@ -40,9 +40,9 @@ Agent `AGENTS.md` ni o‘qiydi: qaysi faylni qachon ochish, CSS'ni qanday ulash,
 | `components/<Nom>/` | Har komponent: `README.md` (tuzilma, qoidalar) va `example.html` (namuna) |
 | `dist/uzbtrust.css` | Ulanadigan fayl: `tokens.css` + `bundle.css` |
 | `dist/tokens.css` | Faqat tokenlar (CSS o‘zgaruvchilar va type klasslari) |
-| `fonts/` | Inter 4.1 (variable) — Apple bo‘lmagan qurilmalar uchun SF o‘rnini bosuvchi, OFL |
+| `fonts/` | Inter 4.1 (variable) — SF yo‘q qurilmalar uchun uning o‘rnini bosuvchi, OFL |
 | `assets/Logos` · `Icons` · `Marks` | Logo (PNG), 43 ta Lucide ikoni (SVG), mahsulot belgisi namunalari |
-| `examples/site.html` | apple.com uslubidagi to‘liq sayt namunasi |
+| `examples/site.html` | To‘liq sayt namunasi |
 | `scripts/build.py` | `dist/` ni qayta yig‘adi |
 
 ## Komponentlar
@@ -56,9 +56,9 @@ Agent `AGENTS.md` ni o‘qiydi: qaysi faylni qachon ochish, CSS'ni qanday ulash,
 
 ## Shrift
 
-- **Apple qurilmalarida** — haqiqiy San Francisco, tizimning o‘zidan: `--font-sans` → SF Pro, `--font-mono` → SF Mono, `--font-serif` → New York, `--font-rounded` → SF Pro Rounded.
-- **Boshqa qurilmalarda** (Windows, Android, Linux) — **Inter 4.1**, SF'ga eng yaqin ochiq shrift. U `fonts/` da turadi va `dist/uzbtrust.css` bilan o‘zi ulanadi; Apple qurilmasida yuklanmaydi ham. Litsenziya: SIL OFL 1.1 (`fonts/LICENSE.txt`).
-- Apple'ning SF fayllari repoga qo‘shilmaydi: ularning litsenziyasi faqat Apple platformalari uchun maket chizishga ruxsat beradi va tarqatishni taqiqlaydi.
+- **SF bor qurilmalarda** — tizimning o‘z shrifti: `--font-sans` → SF Pro, `--font-mono` → SF Mono, `--font-serif` → New York, `--font-rounded` → SF Pro Rounded.
+- **Boshqa qurilmalarda** (Windows, Android, Linux) — **Inter 4.1**, SF'ga eng yaqin ochiq shrift. U `fonts/` da turadi va `dist/uzbtrust.css` bilan o‘zi ulanadi; SF bor qurilmada yuklanmaydi ham. Litsenziya: SIL OFL 1.1 (`fonts/LICENSE.txt`).
+- SF shrift fayllari repoga qo‘shilmaydi: ularning litsenziyasi tarqatishni taqiqlaydi.
 
 ## Versiyalar
 
