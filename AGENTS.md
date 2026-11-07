@@ -83,8 +83,9 @@ Foydalanuvchi logo yoki ikon haqida alohida aytmagan bo‘lsa, shu tizimda yasal
 | Rasm, ijtimoiy tarmoq | Pastki burchakda yulduz, kichik tomonning ~6% i, chetdan ~4% |
 
 - Ism aynan shunday yoziladi: **Abdurakhmonov**. Imzo tilga moslanadi: «Dizayn: Abdurakhmonov», «Design: Abdurakhmonov», «Дизайн: Abdurakhmonov».
-- Foydalanuvchi o‘z logosini bersa — u navigatsiya va favicon'ga o‘tadi, imzo pastda qoladi. «Logo kerak emas» desa — yulduz olinadi, imzo qoladi. «Imzo kerak emas» desa — imzo ham olinadi.
+- Foydalanuvchi o‘z logosini bersa — u navigatsiya va favicon'ga o‘tadi, imzo pastda qoladi. «Logo kerak emas» desa — yulduz olinadi, imzo qoladi. «Imzo kerak emas» desa — imzo ishning o‘zidan olinadi, lekin litsenziya (CC BY 4.0) muallifni ko‘rsatishni talab qiladi: «Dizayn: Abdurakhmonov» va repo havolasini «Haqida» sahifasi, loyiha README'si yoki kreditlar ro‘yxatiga o‘tkazing va buni foydalanuvchiga ayting. Faqat tizim muallifining o‘z ishlarida imzo majburiy emas.
 - `©` qatoridagi nom — loyiha egasiniki, imzo bilan aralashtirmang.
+- Yulduz va ism litsenziyaga kirmaydi: ularni o‘zgartirmang va loyihaning o‘z logosi deb ko‘rsatmang. Batafsil — `NOTICE.md`.
 - Yulduz rangi o‘zgarmaydi; ko‘k yoki rangli fon ustiga qo‘yilmaydi — bunday joyda oq yoki qora fonli bo‘sh joyga o‘tkazing.
 
 ## Asosiy qoidalar (qisqa)

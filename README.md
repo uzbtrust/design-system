@@ -48,6 +48,7 @@ Standart holatda har bir ishga muallif belgisi qo‘yiladi: favicon, yulduz va p
 | `assets/Logos` · `Icons` · `Marks` | Logo (PNG), 43 ta Lucide ikoni (SVG), mahsulot belgisi namunalari |
 | `examples/site.html` | To‘liq sayt namunasi |
 | `scripts/build.py` | `dist/` ni qayta yig‘adi |
+| `LICENSE` · `NOTICE.md` | CC BY 4.0 matni; muallifni ko‘rsatish shakli va istisnolar |
 
 ## Komponentlar
 
@@ -63,6 +64,10 @@ Standart holatda har bir ishga muallif belgisi qo‘yiladi: favicon, yulduz va p
 - **SF bor qurilmalarda** — tizimning o‘z shrifti: `--font-sans` → SF Pro, `--font-mono` → SF Mono, `--font-serif` → New York, `--font-rounded` → SF Pro Rounded.
 - **Boshqa qurilmalarda** (Windows, Android, Linux) — **Inter 4.1**, SF'ga eng yaqin ochiq shrift. U `fonts/` da turadi va `dist/uzbtrust.css` bilan o‘zi ulanadi; SF bor qurilmada yuklanmaydi ham. Litsenziya: SIL OFL 1.1 (`fonts/LICENSE.txt`).
 - SF shrift fayllari repoga qo‘shilmaydi: ularning litsenziyasi tarqatishni taqiqlaydi.
+
+## Litsenziya
+
+[CC BY 4.0](LICENSE) — shaxsiy va tijorat ishlarida bepul, faqat muallifni ko‘rsatish shart: «Dizayn: Abdurakhmonov» va shu repoga havola. `Signature` imzosi buni o‘zi bajaradi. Yulduz logosi va nomlar litsenziyaga kirmaydi, Inter va Lucide o‘z litsenziyasi bilan keladi. Batafsil — [NOTICE.md](NOTICE.md).
 
 ## Versiyalar
 

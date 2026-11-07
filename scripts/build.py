@@ -17,6 +17,10 @@ BUNDLE = ROOT / "components" / "bundle.css"
 DIST = ROOT / "dist"
 
 HEADER = "/* uzbtrust — generated from tokens.json */\n"
+LICENSE_NOTE = (
+    "/*! uzbtrust · © 2026 Abdurakhmonov · CC BY 4.0 · Dizayn: Abdurakhmonov — "
+    "https://github.com/uzbtrust/design-system · logo va nomlar litsenziyaga kirmaydi: NOTICE.md */\n"
+)
 
 
 def css_value(value):
@@ -85,8 +89,8 @@ def main():
     tokens_css = build_tokens_css(tokens)
     bundle = BUNDLE.read_text(encoding="utf-8")
     DIST.mkdir(exist_ok=True)
-    (DIST / "tokens.css").write_text(tokens_css, encoding="utf-8")
-    (DIST / "uzbtrust.css").write_text(tokens_css + "\n" + bundle, encoding="utf-8")
+    (DIST / "tokens.css").write_text(LICENSE_NOTE + tokens_css, encoding="utf-8")
+    (DIST / "uzbtrust.css").write_text(LICENSE_NOTE + tokens_css + "\n" + bundle, encoding="utf-8")
     print(f"dist/tokens.css   {len(tokens_css):>7} bayt")
     print(f"dist/uzbtrust.css {len(tokens_css) + len(bundle) + 1:>7} bayt")
 
