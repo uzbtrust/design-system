@@ -18,8 +18,8 @@ DIST = ROOT / "dist"
 
 HEADER = "/* uzbtrust — generated from tokens.json */\n"
 LICENSE_NOTE = (
-    "/*! uzbtrust · © 2026 Abdurakhmonov · CC BY 4.0 · Dizayn: Abdurakhmonov — "
-    "https://github.com/uzbtrust/design-system · logo va nomlar litsenziyaga kirmaydi: NOTICE.md */\n"
+    "/*! uzbtrust · © 2026 Abdurakhmonov · CC BY 4.0 · Dizayn: uzbtrust — "
+    "https://github.com/uzbtrust/design-system · yulduz va nik olib tashlanmaydi; logo va nomlar litsenziyaga kirmaydi: NOTICE.md */\n"
 )
 
 

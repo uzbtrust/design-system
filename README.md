@@ -30,7 +30,7 @@ Istalgan AI'ga (Claude, ChatGPT, Cursor…) shunday yozing:
 
 Agent `AGENTS.md` ni o‘qiydi: qaysi faylni qachon ochish, CSS'ni qanday ulash, logo va ikonlarni qayerdan olish, qaysi qoidalarga amal qilish shu yerda yozilgan.
 
-Standart holatda har bir ishga muallif belgisi qo‘yiladi: favicon, yulduz va pastda «Dizayn: Abdurakhmonov» imzosi. Logo haqida alohida aytsangiz, shunga amal qilinadi.
+Har bir ishga muallif belgisi — yulduz va nik — qo‘yiladi va olib tashlanmaydi: veb-sahifada favicon va pastda «Dizayn: uzbtrust» imzosi, faylda (PDF, hujjat, taqdimot, rasm) burchakda yulduz va «Abdurakhmonov».
 
 ## Tuzilma
 
@@ -67,7 +67,7 @@ Standart holatda har bir ishga muallif belgisi qo‘yiladi: favicon, yulduz va p
 
 ## Litsenziya
 
-[CC BY 4.0](LICENSE) — shaxsiy va tijorat ishlarida bepul, faqat muallifni ko‘rsatish shart: «Dizayn: Abdurakhmonov» va shu repoga havola. `Signature` imzosi buni o‘zi bajaradi. Yulduz logosi va nomlar litsenziyaga kirmaydi, Inter va Lucide o‘z litsenziyasi bilan keladi. Batafsil — [NOTICE.md](NOTICE.md).
+[CC BY 4.0](LICENSE) — shaxsiy va tijorat ishlarida bepul, faqat muallifni ko‘rsatish shart, va u doim ishning o‘zida turadi: yulduz va nik — veb-sahifada «Dizayn: uzbtrust» (repoga havola bilan), faylda «Abdurakhmonov». Olib tashlash, yashirish yoki almashtirish mumkin emas. `Signature` imzosi veb uchun buni o‘zi bajaradi. Yulduz logosi va nomlar litsenziyaga kirmaydi, Inter va Lucide o‘z litsenziyasi bilan keladi. Batafsil — [NOTICE.md](NOTICE.md).
 
 ## Versiyalar
 

@@ -6,7 +6,7 @@ Saytning eng yuqori navigatsiyasi: chapda uzbtrust yulduzi, o‘rtada bo‘limla
 ```html
 <nav class="globalnav" aria-label="Asosiy">
   <div class="globalnav-inner">
-    <a class="globalnav-brand" href="/"><span class="uzbtrust-mark" role="img" aria-label="Abdurakhmonov"></span></a>
+    <a class="globalnav-brand" href="/"><span class="uzbtrust-mark" role="img" aria-label="uzbtrust"></span></a>
     <ul class="globalnav-list" id="gn-list">
       <li><a class="globalnav-link" href="…" aria-current="page">Bosh sahifa</a></li>
       <li><a class="globalnav-link" href="…">Loyihalar</a></li>
