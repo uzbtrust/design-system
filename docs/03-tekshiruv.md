@@ -10,6 +10,7 @@ Har yangi ish shu ro‘yxatdan o‘tadi. Muhitga tegishli bo‘lmagan bandlarni 
 - **Kontrast:** matn 4.5:1, katta matn va ma’noli ikon 3:1. Holat rang bilan birga so‘z yoki shakl bilan ham berilgan.
 - **Matn:** ‘ va ’ belgilari to‘g‘ri, qo‘shtirnoq tilga mos, sentence case, haqiqiy ism misol sifatida yo‘q.
 - **Raqamlar:** `tabular-nums`, birliklari bilan.
+- **Belgi:** favicon, yulduz va «Dizayn: Abdurakhmonov» imzosi turibdi (foydalanuvchi boshqacha aytmagan bo‘lsa).
 
 ## Ekran (veb, ilova)
 
